@@ -52,7 +52,6 @@
 
     <!-- Основное содержание -->
     <main class="main">
-      <h1 class="visually-hidden">Каталог</h1>
 
       <!-- Заголовок страницы -->
       <header class="catalog-header">
@@ -74,7 +73,7 @@
 
       <!-- Выбор фильтров -->
       <section class="catalog-filter">
-
+        <h2 class="visually-hidden">Фильтрация гостиниц</h2>
         <!-- Форма выбора фильтров-->
         <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="catalog-filter-infrastructure">
@@ -178,9 +177,7 @@
             <img class="star" src="#" alt="">
           </div>
 
-          <div class="raiting-block">
-            <span class="raiting">Рейтинг 8,5</span>
-          </div>
+          <p class="raiting">Рейтинг 8,5</p>
         </article>
 
         <article class="catalog-card">
@@ -202,9 +199,7 @@
             <img class="star" src="#" alt="">
           </div>
 
-          <div class="raiting-block">
-            <span class="raiting">Рейтинг 9,2</span>
-          </div>
+          <p class="raiting">Рейтинг 9,2</p>
         </article>
 
         <article class="catalog-card">
@@ -225,9 +220,7 @@
             <img class="star" src="#" alt="">
           </div>
 
-          <div class="raiting-block">
-            <span class="raiting">Рейтинг 6,9</span>
-          </div>
+          <p class="raiting">Рейтинг 6,9</p>
         </article>
 
         <article class="catalog-card">
@@ -247,37 +240,20 @@
             <img class="star" src="#" alt="">
           </div>
 
-          <div class="raiting-block">
-            <span class="raiting">Рейтинг 5,0</span>
-          </div>
+          <p class="raiting">Рейтинг 5,0</p>
+
+
         </article>
 
         <!-- Номера страниц каталога -->
-        <ul class="catolog-pages-list">
-          <li class="catalog-pages-item">
-            <a class="pages-link pages-link-current">1</a>
-          </li>
-
-          <li class="catalog-pages-item">
-            <a class="pages-link" href="#">2</a>
-          </li>
-
-          <li class="catalog-pages-item">
-            <a class="pages-link" href="#">3</a>
-          </li>
-
-          <li class="catalog-pages-item">
-            <a class="pages-link" href="#">4</a>
-          </li>
-
-          <li class="catalog-pages-item">
-            <span class="pages-spacing">...</span>
-          </li>
-
-          <li class="catalog-pages-item">
-            <a class="pages-link" href="#">10</a>
-          </li>
-        </ul>
+        <div class="catolog-pages" aria-label="Номера страниц каталога">
+          <a class="pages-link pages-link-current">1</a>
+          <a class="pages-link" href="#">2</a>
+          <a class="pages-link" href="#">3</a>
+          <a class="pages-link" href="#">4</a>
+          <span class="pages-spacing">...</span>
+          <a class="pages-link" href="#">10</a>
+        </div>
       </section>
 
       <!-- Рассылка -->
@@ -296,38 +272,30 @@
     <footer class="footer">
 
       <!-- Блок соц. сетей -->
-      <section class="footer-social">
+      <section class="social">
         <h2 class="visually-hidden">Наши социальные сети</h2>
 
-        <ul class="footer-social-list">
-          <li class="footer-social-item">
-            <a class="footer-social-link" href="https://vk.com/htmlacademy/">
-              <span class="visually-hidden">ВКонтакте</span>
-            </a>
-          </li>
+        <a class="social-link" href="https://vk.com/htmlacademy/">
+          <span class="visually-hidden">ВКонтакте</span>
+        </a>
 
-          <li class="footer-social-item">
-            <a class="footer-social-link" href="https://t.me/htmlacademy/">
-              <span class="visually-hidden">Телеграм</span>
-            </a>
-          </li>
+        <a class="social-link" href="https://t.me/htmlacademy/">
+          <span class="visually-hidden">Телеграм</span>
+        </a>
 
-          <li class="footer-social-item">
-            <a class="footer-social-link" href="https://www.youtube.com/user/htmlacademyru/">
-              <span class="visually-hidden">Youtube</span>
-            </a>
-          </li>
-        </ul>
+        <a class="social-link" href="https://www.youtube.com/user/htmlacademyru/">
+          <span class="visually-hidden">Youtube</span>
+        </a>
       </section>
 
       <!-- Телефонный номер -->
-      <div class="footer-phone">
-        <a class="footer-phone-link" href="tel:88128121212">+7 (812) 812 12 12</a>
+      <div class="phone" aria-label="Телефонный номер">
+        <a class="phone-link" href="tel:88128121212">+7 (812) 812 12 12</a>
       </div>
 
       <!-- HTML академия -->
-      <div class="footer-partner">
-        <a class="footer-partner-link" href="https://htmlacademy.ru/">
+      <div class="partner" aria-label="ссылка на HTML академию">
+        <a class="partner-link" href="https://htmlacademy.ru/">
           <span class="visually-hidden">HTML-Academy</span>
         </a>
       </div>
