@@ -4,6 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Каталог</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -12,7 +13,8 @@
     <header class="header">
       <nav class="navigation">
         <a class="navigation-logo-link" href="index.html">
-          <img class="navigation-logo" src="images/logo.svg" alt="Логотип сайта по городу Седона." width="140" height="70">
+          <img class="navigation-logo" src="images/logo.svg" alt="Логотип сайта по городу Седона." width="140"
+            height="70">
         </a>
 
         <ul class="navigation-list">
@@ -137,7 +139,7 @@
         </select>
 
         <!-- Способ отображения -->
-        <div class="catalog-cards-display" aria-label="Способ отображения">
+        <div class="catalog-cards-display">
           <a class="button catalog-display-button" href="#">
             <span class="visually-hidden">Карточками</span>
           </a>
@@ -154,7 +156,8 @@
         <!-- Карточки товаров -->
         <article class="catalog-card">
           <a class="card-link" href="#">
-            <img class="card-image" src="images/catalog-cards/hotel-1.jpg" alt="Горное ущелье." width="300" height="212">
+            <img class="card-image" src="images/catalog-cards/hotel-1.jpg" alt="Горное ущелье." width="300"
+              height="212">
             <h3 class="card-title">Amara Resort & Spa</h3>
           </a>
 
@@ -164,19 +167,17 @@
           <a class="button card-button" href="#">Подробнее</a>
           <a class="button favorites-button" href="#">В избранное</a>
 
-          <div class="star-rating">
-            <img class="star" src="#" alt="">
-            <img class="star" src="#" alt="">
-            <img class="star" src="#" alt="">
-            <img class="star" src="#" alt="">
-          </div>
+          <p class="star-rating">
+            <span class="visually-hidden">4 звезды</span>
+          </p>
 
           <p class="rating">Рейтинг 8,5</p>
         </article>
 
         <article class="catalog-card">
           <a class="card-link" href="#">
-            <img class="card-image" src="images/catalog-cards/hotel-2.jpg" alt="Радуга и горы в далеке." width="300" height="212">
+            <img class="card-image" src="images/catalog-cards/hotel-2.jpg" alt="Радуга и горы в далеке." width="300"
+              height="212">
             <h3 class="card-title">Villas at Poco Diablo</h3>
           </a>
 
@@ -186,12 +187,9 @@
           <a class="button card-button" href="#">Подробнее</a>
           <a class="button favorites-button favorites-button-active" href="#">В избранном</a>
 
-          <div class="star-rating">
-            <img class="star" src="#" alt="">
-            <img class="star" src="#" alt="">
-            <img class="star" src="#" alt="">
-            <img class="star" src="#" alt="">
-          </div>
+          <p class="star-rating">
+            <span class="visually-hidden">4 звезды</span>
+          </p>
 
           <p class="rating">Рейтинг 9,2</p>
         </article>
@@ -208,18 +206,17 @@
           <a class="button card-button" href="#">Подробнее</a>
           <a class="button favorites-button" href="#">В избранное</a>
 
-          <div class="star-rating">
-            <img class="star" src="#" alt="">
-            <img class="star" src="#" alt="">
-            <img class="star" src="#" alt="">
-          </div>
+          <p class="star-rating">
+            <span class="visually-hidden">3 звезды</span>
+          </p>
 
           <p class="rating">Рейтинг 6,9</p>
         </article>
 
         <article class="catalog-card">
           <a class="card-link" href="#">
-            <img class="card-image" src="images/catalog-cards/hotel-4.jpg" alt="Горы и ночное небо." width="300" height="212">
+            <img class="card-image" src="images/catalog-cards/hotel-4.jpg" alt="Горы и ночное небо." width="300"
+              height="212">
             <h3 class="card-title">GreenTree Inn</h3>
           </a>
 
@@ -229,10 +226,9 @@
           <a class="button card-button" href="#">Подробнее</a>
           <a class="button favorites-button" href="#">В избранное</a>
 
-          <div class="star-rating">
-            <img class="star" src="#" alt="">
-            <img class="star" src="#" alt="">
-          </div>
+          <p class="star-rating">
+            <span class="visually-hidden">2 звезды</span>
+          </p>
 
           <p class="rating">Рейтинг 5,0</p>
 
@@ -240,7 +236,7 @@
         </article>
 
         <!-- Номера страниц каталога -->
-        <div class="catolog-pages" aria-label="Номера страниц каталога">
+        <div class="catolog-pages">
           <a class="pages-link pages-link-current">1</a>
           <a class="pages-link" href="#">2</a>
           <a class="pages-link" href="#">3</a>
@@ -283,12 +279,12 @@
       </section>
 
       <!-- Телефонный номер -->
-      <div class="phone" aria-label="Телефонный номер">
+      <div class="phone">
         <a class="phone-link" href="tel:88128121212">+7 (812) 812 12 12</a>
       </div>
 
       <!-- HTML академия -->
-      <div class="partner" aria-label="ссылка на HTML академию">
+      <div class="partner">
         <a class="partner-link" href="https://htmlacademy.ru/">
           <span class="visually-hidden">HTML-Academy</span>
         </a>
