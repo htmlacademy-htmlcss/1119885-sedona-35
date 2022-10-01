@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url(../fonts/ptsans-400.woff2) format(woff2);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url(../fonts/ptsans-700.woff2) format(woff2);
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Общие правила */
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+
+  background-color: #fff;
+  color: #000;
+}
+
+.button {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+/* Шапка сайта */
+.header {
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.navigation {
+  text-align: center;
+}
+
+.navigation-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.favorites-count {
+  color: #fff;
+  background-color: #7db54f;
+
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.navigation-button {
+  background-color:#756157;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* Блок герой */
+.hero {
+  background-image: url(../images/index-hero-background.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+  text-align: center;
+}
+
+.hero-wrapper {
+  background-color: #fff;
+}
+
+.hero-title {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.hero-description {
+  color: #333;
+}
+
+/* Особенности */
+.advantages-item, .accommodations-item {
+  text-align: center;
+}
+
+.advantages-title, .accommodations-title {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.advantages-description, .accommodations-description {
+  font-size: 18px;
+  line-height: 21px;
+  color:#333;
+}
+
+.blue, .blue .advantages-description  {
+  background-color: #82b3d3;
+  color: #fff;
+}
+.white {
+  background-color: rgba(131, 179, 211, 0.12);
+
+}
+
+.grey {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+/* Поиск гостиницы */
+.search {
+  text-align: center;
+}
+
+.search-title {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.search-description {
+  color: #333;
+}
+
+.search-button {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #756157;
+}
+
+/* Рассылка */
+.newsletter {
+  text-align: center;
+  color: #fff;
+}
+
+.newsletter-background {
+  background-image: url(../images/newsletter-background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #82b3d3;
+}
+
+.newsletter-title {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.newsletter-button {
+  background-color: #82b3d3;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.newsletter-input {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* Подвал страницы */
+.phone-link {
+  font-size: 40px;
+  line-height: 40px;
+  color: #000;
+  text-decoration: none;
+}
