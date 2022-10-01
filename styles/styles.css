@@ -16,13 +16,12 @@
 
 /* Общие правила */
 body {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 22px;
   line-height: 26px;
-  font-weight: 400;
 
   background-color: #fff;
-  color: #000;
+  color: #333;
 }
 
 .button {
@@ -44,13 +43,13 @@ body {
   font-weight: 700;
 }
 
-.navigation {
+.navigation-item {
   text-align: center;
 }
 
 .navigation-link {
   text-decoration: none;
-  color: inherit;
+  color: #000;
 }
 
 .favorites-count {
@@ -63,7 +62,7 @@ body {
 }
 
 .navigation-button {
-  background-color:#756157;
+  background-color: #756157;
   font-size: 16px;
   line-height: 20px;
 }
@@ -84,32 +83,33 @@ body {
 .hero-title {
   font-size: 30px;
   line-height: 36px;
-}
-
-.hero-description {
-  color: #333;
+  color: #000;
 }
 
 /* Особенности */
-.advantages-item, .accommodations-item {
+.advantages-item,
+.accommodations-item  {
   text-align: center;
 }
 
-.advantages-title, .accommodations-title {
+.advantages-title,
+.accommodations-title {
   font-size: 24px;
   line-height: 28px;
+  color: #000;
 }
 
-.advantages-description, .accommodations-description {
+.advantages-description,
+.accommodations-description {
   font-size: 18px;
   line-height: 21px;
-  color:#333;
 }
 
-.blue, .blue .advantages-description  {
+.blue  {
   background-color: #82b3d3;
   color: #fff;
 }
+
 .white {
   background-color: rgba(131, 179, 211, 0.12);
 
@@ -127,10 +127,7 @@ body {
 .search-title {
   font-size: 30px;
   line-height: 36px;
-}
-
-.search-description {
-  color: #333;
+  color: #000;
 }
 
 .search-button {
@@ -146,10 +143,7 @@ body {
 }
 
 .newsletter-background {
-  background-image: url(../images/newsletter-background.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-color: #82b3d3;
+  background: url(../images/newsletter-background.jpg) 0 0/100% no-repeat #82b3d3;
 }
 
 .newsletter-title {
