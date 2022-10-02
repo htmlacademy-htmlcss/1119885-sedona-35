@@ -31,28 +31,17 @@ body {
   font-weight: 700;
 }
 
-.title {
-  text-transform: uppercase;
-}
-
-.link {
-  text-decoration: none;
-}
-
 /* Шапка сайта */
-.header {
+.navigation-item {
   font-size: 20px;
   line-height: 24px;
-  text-transform: capitalize;
   font-weight: 700;
-}
-
-.navigation-item {
   text-align: center;
 }
 
 .navigation-link {
   color: #000;
+  text-decoration: none;
 }
 
 .favorites-count {
@@ -74,10 +63,7 @@ body {
 
 /* Блок герой */
 .hero {
-  background-image: url(../images/index-hero-background.jpg);
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-
+  background: url(../images/index-hero-background.jpg) 0 0/100% no-repeat;
   text-align: center;
 }
 
@@ -89,6 +75,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   color: #000;
+  text-transform: uppercase;
 }
 
 /* Особенности */
@@ -115,9 +102,12 @@ body {
   color: #fff;
 }
 
+.blue .advantages-title {
+  color: inherit;
+}
+
 .white {
   background-color: rgba(131, 179, 211, 0.12);
-
 }
 
 .grey {
@@ -157,6 +147,10 @@ body {
   color: #000;
 }
 
+.newsletter-background .newsletter-title {
+  color: #fff;
+}
+
 .newsletter-button {
   background-color: #82b3d3;
   font-size: 20px;
@@ -172,11 +166,10 @@ body {
 /* Фильтрация гостиниц */
 .filter-wrapper {
   color: #fff;
-  background: url(../images/index-hero-background.jpg) 0 0/100% no-repeat #82b3d3;
+  background: url(../images/catalog-header-background.jpg) 0 0/100% no-repeat #82b3d3;
 }
 
 .catalog-title {
-  text-transform: capitalize;
   font-size: 60px;
   line-height: 78px;
 }
@@ -207,13 +200,13 @@ body {
 }
 
 /* Сортировка и способ отображения */
-.catalog-cards-title {
+.cards-title {
   font-size: 30px;
   line-height: 36px;
   color: #000;
 }
 
-.card-sort {
+.cards-sort {
   font-size: 18px;
   line-height: 21px;
   color: #333;
@@ -228,13 +221,18 @@ body {
 }
 
 /* Карточки гостиниц */
+.card-link {
+  text-decoration: none;
+}
+
 .card-title {
   color: #000;
   font-size: 24px;
   line-height: 28px;
 }
 
-.card-type {
+.card-type,
+.card-price {
   font-size: 18px;
   line-height: 21px;
 }
@@ -251,6 +249,10 @@ body {
   background-color: #82b3d3;
 }
 
+.favorites-button-active {
+  background-color: #7db54f;
+}
+
 .rating {
   text-transform: uppercase;
   font-size: 16px;
@@ -259,17 +261,18 @@ body {
 }
 
 /* Нумерация страниц */
-.catalog-pages {
+.pagination {
   font-size: 20px;
   line-height: 36px;
 }
 
-.pages-link {
+.pagination-link {
   background-color: #82b3d3;
   color: #fff;
+  text-decoration: none;
 }
 
-.pages-link-current {
+.pagination-link-current {
   background-color: #f2f2f2;
   color: #000;
 }

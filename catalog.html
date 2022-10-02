@@ -62,7 +62,7 @@
           <!-- Хлебные крошки -->
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
-              <a class="link breadcrumbs-link" href="index.html">
+              <a class="breadcrumbs-link" href="index.html">
                 <span class="visually-hidden">Главная</span>
               </a>
             </li>
@@ -74,11 +74,11 @@
         </header>
 
         <!-- Выбор фильтров -->
-        <section class="catalog-filter">
+        <section class="filter">
           <h2 class="visually-hidden">Фильтрация гостиниц</h2>
           <!-- Форма выбора фильтров-->
-          <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="catalog-filter-infrastructure">
+          <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
+            <fieldset class="filter-infrastructure">
               <legend class="control-title">Инфраструктура:</legend>
 
               <label class="control">
@@ -97,7 +97,7 @@
               </label>
             </fieldset>
 
-            <fieldset class="catalog-filter-housing">
+            <fieldset class="filter-housing">
               <legend class="control-title">Тип Жилья:</legend>
 
               <label class="control">
@@ -116,7 +116,7 @@
               </label>
             </fieldset>
 
-            <fieldset class="catalog-filter-price">
+            <fieldset class="filter-price">
               <legend class="control-title">Стоимость, ₽:</legend>
               <!-- пока не стал размечать стоимость -->
             </fieldset>
@@ -127,11 +127,11 @@
         </section>
       </div>
       <!-- Каталог -->
-      <section class="catalog-cards">
-        <h2 class="title catalog-cards-title">Найдено гостиниц: <span class="result-count">38</span></h2>
+      <section class="cards">
+        <h2 class="cards-title">Найдено гостиниц: <span class="result-count">38</span></h2>
 
         <!-- Сортировка -->
-        <select class="card-sort" aria-label="Сортировка">
+        <select class="cards-sort" aria-label="Сортировка">
           <option value="popular">Сначала популярные</option>
           <option value="cheap">Сначала дешёвые</option>
           <option value="expensive">Сначала дорогие</option>
@@ -153,14 +153,15 @@
         </div>
 
         <!-- Карточки товаров -->
-        <article class="catalog-card">
-          <a class="link card-link" href="#">
+        <article class="card">
+          <a class="card-link" href="#">
             <img class="card-image" src="images/catalog-cards/hotel-1.jpg" alt="Горное ущелье." width="300"
               height="212">
             <h3 class="card-title">Amara Resort & Spa</h3>
           </a>
 
-          <p class="card-type">Гостиница <span class="card-price">От 4000 ₽</span></p>
+          <p class="card-type">Гостиница</p>
+          <p class="card-price">От 4000 ₽</p>
 
           <a class="button card-button" href="#">Подробнее</a>
           <a class="button favorites-button" href="#">В избранное</a>
@@ -169,11 +170,11 @@
             <span class="visually-hidden">4 звезды</span>
           </p>
 
-          <p class="rating">Рейтинг 8,5</p>
+          <p class="rating">Рейтинг: 8,5</p>
         </article>
 
-        <article class="catalog-card">
-          <a class="link card-link" href="#">
+        <article class="card">
+          <a class="card-link" href="#">
             <img class="card-image" src="images/catalog-cards/hotel-2.jpg" alt="Радуга и горы в далеке." width="300"
               height="212">
             <h3 class="card-title">Villas at Poco Diablo</h3>
@@ -189,11 +190,11 @@
             <span class="visually-hidden">4 звезды</span>
           </p>
 
-          <p class="rating">Рейтинг 9,2</p>
+          <p class="rating">Рейтинг: 9,2</p>
         </article>
 
-        <article class="catalog-card">
-          <a class="link card-link" href="#">
+        <article class="card">
+          <a class="card-link" href="#">
             <img class="card-image" src="images/catalog-cards/hotel-3.jpg" alt="Горы." width="300" height="212">
             <h3 class="card-title">Desert Quail Inn</h3>
           </a>
@@ -208,11 +209,11 @@
             <span class="visually-hidden">3 звезды</span>
           </p>
 
-          <p class="rating">Рейтинг 6,9</p>
+          <p class="rating">Рейтинг: 6,9</p>
         </article>
 
-        <article class="catalog-card">
-          <a class="link card-link" href="#">
+        <article class="card">
+          <a class="card-link" href="#">
             <img class="card-image" src="images/catalog-cards/hotel-4.jpg" alt="Горы и ночное небо." width="300"
               height="212">
             <h3 class="card-title">GreenTree Inn</h3>
@@ -228,17 +229,17 @@
             <span class="visually-hidden">2 звезды</span>
           </p>
 
-          <p class="rating">Рейтинг 5,0</p>
+          <p class="rating">Рейтинг: 5,0</p>
         </article>
 
         <!-- Номера страниц каталога -->
-        <div class="catalog-pages">
-          <a class="link pages-link pages-link-current">1</a>
-          <a class="link pages-link" href="#">2</a>
-          <a class="link pages-link" href="#">3</a>
-          <a class="link pages-link" href="#">4</a>
-          <span class="pages-spacing">...</span>
-          <a class="link pages-link" href="#">10</a>
+        <div class="pagination">
+          <a class="pagination-link pagination-link-current">1</a>
+          <a class="pagination-link" href="#">2</a>
+          <a class="pagination-link" href="#">3</a>
+          <a class="pagination-link" href="#">4</a>
+          <span class="pagination-spacing">...</span>
+          <a class="pagination-link" href="#">10</a>
         </div>
       </section>
 
