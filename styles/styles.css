@@ -35,6 +35,10 @@ body {
   text-transform: uppercase;
 }
 
+.link {
+  text-decoration: none;
+}
+
 /* Шапка сайта */
 .header {
   font-size: 20px;
@@ -48,7 +52,6 @@ body {
 }
 
 .navigation-link {
-  text-decoration: none;
   color: #000;
 }
 
@@ -66,6 +69,8 @@ body {
   font-size: 16px;
   line-height: 20px;
 }
+
+/* Главная страница */
 
 /* Блок герой */
 .hero {
@@ -88,7 +93,7 @@ body {
 
 /* Особенности */
 .advantages-item,
-.accommodations-item  {
+.accommodations-item {
   text-align: center;
 }
 
@@ -105,7 +110,7 @@ body {
   line-height: 21px;
 }
 
-.blue  {
+.blue {
   background-color: #82b3d3;
   color: #fff;
 }
@@ -139,16 +144,17 @@ body {
 /* Рассылка */
 .newsletter {
   text-align: center;
-  color: #fff;
 }
 
 .newsletter-background {
   background: url(../images/newsletter-background.jpg) 0 0/100% no-repeat #82b3d3;
+  color: #fff;
 }
 
 .newsletter-title {
   font-size: 30px;
   line-height: 36px;
+  color: #000;
 }
 
 .newsletter-button {
@@ -162,10 +168,115 @@ body {
   line-height: 24px;
 }
 
+/* Страница каталога */
+/* Фильтрация гостиниц */
+.filter-wrapper {
+  color: #fff;
+  background: url(../images/index-hero-background.jpg) 0 0/100% no-repeat #82b3d3;
+}
+
+.catalog-title {
+  text-transform: capitalize;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.control-title {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.control {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.filter-button {
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #82b3d3;
+}
+
+.reset-button {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* Сортировка и способ отображения */
+.catalog-cards-title {
+  font-size: 30px;
+  line-height: 36px;
+  color: #000;
+}
+
+.card-sort {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333;
+}
+
+.cards-display {
+  text-align: center;
+}
+
+.display-button {
+  color: #000;
+}
+
+/* Карточки гостиниц */
+.card-title {
+  color: #000;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.card-type {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card-button {
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #756157;
+}
+
+.favorites-button {
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #82b3d3;
+}
+
+.rating {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #f2f2f2;
+}
+
+/* Нумерация страниц */
+.catalog-pages {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.pages-link {
+  background-color: #82b3d3;
+  color: #fff;
+}
+
+.pages-link-current {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
 /* Подвал страницы */
 .phone-link {
   font-size: 40px;
   line-height: 40px;
   color: #000;
-  text-decoration: none;
 }
