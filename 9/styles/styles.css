@@ -32,7 +32,7 @@ body {
 }
 
 /* Шапка сайта */
-.navigation-item {
+.navigation {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -79,19 +79,19 @@ body {
 }
 
 /* Особенности */
-.advantages-item,
+.features-item,
 .accommodations-item {
   text-align: center;
 }
 
-.advantages-title,
+.features-title,
 .accommodations-title {
   font-size: 24px;
   line-height: 28px;
   color: #000;
 }
 
-.advantages-description,
+.features-description,
 .accommodations-description {
   font-size: 18px;
   line-height: 21px;
@@ -102,7 +102,7 @@ body {
   color: #fff;
 }
 
-.blue .advantages-title {
+.blue .features-title {
   color: inherit;
 }
 
