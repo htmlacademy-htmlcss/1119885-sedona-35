@@ -63,7 +63,7 @@ body {
 
 /* Блок герой */
 .hero {
-  background: url(../images/index-hero-background.jpg) 0 0/100% no-repeat;
+  background: url(../images/index-hero-background.jpg) 0 0/cover no-repeat;
   text-align: center;
 }
 
@@ -79,6 +79,10 @@ body {
 }
 
 /* Особенности */
+.features-list {
+  list-style-type: none;
+}
+
 .features-item,
 .accommodations-item {
   text-align: center;
@@ -137,7 +141,7 @@ body {
 }
 
 .newsletter-background {
-  background: url(../images/newsletter-background.jpg) 0 0/100% no-repeat #82b3d3;
+  background: #82b3d3 url(../images/newsletter-background.jpg) 0 0/cover no-repeat;
   color: #fff;
 }
 
@@ -152,12 +156,14 @@ body {
 }
 
 .newsletter-button {
+  font-family: "PT Sans", "Arial", sans-serif;
   background-color: #82b3d3;
   font-size: 20px;
   line-height: 36px;
 }
 
 .newsletter-input {
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
 }
@@ -166,7 +172,7 @@ body {
 /* Фильтрация гостиниц */
 .filter-wrapper {
   color: #fff;
-  background: url(../images/catalog-header-background.jpg) 0 0/100% no-repeat #82b3d3;
+  background: #82b3d3 url(../images/catalog-header-background.jpg) 0 0/cover no-repeat;
 }
 
 .catalog-title {
@@ -190,6 +196,7 @@ body {
 }
 
 .filter-button {
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   background-color: #82b3d3;
