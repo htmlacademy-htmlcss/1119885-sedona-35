@@ -16,13 +16,12 @@
 
 /* Общие правила */
 body {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 22px;
   line-height: 26px;
-  font-weight: 400;
 
   background-color: #fff;
-  color: #000;
+  color: #333;
 }
 
 .button {
@@ -32,25 +31,17 @@ body {
   font-weight: 700;
 }
 
-.title {
-  text-transform: uppercase;
-}
-
 /* Шапка сайта */
-.header {
+.navigation {
   font-size: 20px;
   line-height: 24px;
-  text-transform: capitalize;
   font-weight: 700;
-}
-
-.navigation {
   text-align: center;
 }
 
 .navigation-link {
+  color: #000;
   text-decoration: none;
-  color: inherit;
 }
 
 .favorites-count {
@@ -63,17 +54,16 @@ body {
 }
 
 .navigation-button {
-  background-color:#756157;
+  background-color: #756157;
   font-size: 16px;
   line-height: 20px;
 }
 
+/* Главная страница */
+
 /* Блок герой */
 .hero {
-  background-image: url(../images/index-hero-background.jpg);
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-
+  background: url(../images/index-hero-background.jpg) 0 0/100% no-repeat;
   text-align: center;
 }
 
@@ -84,35 +74,40 @@ body {
 .hero-title {
   font-size: 30px;
   line-height: 36px;
-}
-
-.hero-description {
-  color: #333;
+  color: #000;
+  text-transform: uppercase;
 }
 
 /* Особенности */
-.advantages-item, .accommodations-item {
+.features-item,
+.accommodations-item {
   text-align: center;
 }
 
-.advantages-title, .accommodations-title {
+.features-title,
+.accommodations-title {
   font-size: 24px;
   line-height: 28px;
+  color: #000;
 }
 
-.advantages-description, .accommodations-description {
+.features-description,
+.accommodations-description {
   font-size: 18px;
   line-height: 21px;
-  color:#333;
 }
 
-.blue, .blue .advantages-description  {
+.blue {
   background-color: #82b3d3;
   color: #fff;
 }
+
+.blue .features-title {
+  color: inherit;
+}
+
 .white {
   background-color: rgba(131, 179, 211, 0.12);
-
 }
 
 .grey {
@@ -127,10 +122,7 @@ body {
 .search-title {
   font-size: 30px;
   line-height: 36px;
-}
-
-.search-description {
-  color: #333;
+  color: #000;
 }
 
 .search-button {
@@ -142,19 +134,21 @@ body {
 /* Рассылка */
 .newsletter {
   text-align: center;
-  color: #fff;
 }
 
 .newsletter-background {
-  background-image: url(../images/newsletter-background.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-color: #82b3d3;
+  background: url(../images/newsletter-background.jpg) 0 0/100% no-repeat #82b3d3;
+  color: #fff;
 }
 
 .newsletter-title {
   font-size: 30px;
   line-height: 36px;
+  color: #000;
+}
+
+.newsletter-background .newsletter-title {
+  color: #fff;
 }
 
 .newsletter-button {
@@ -168,10 +162,124 @@ body {
   line-height: 24px;
 }
 
+/* Страница каталога */
+/* Фильтрация гостиниц */
+.filter-wrapper {
+  color: #fff;
+  background: url(../images/catalog-header-background.jpg) 0 0/100% no-repeat #82b3d3;
+}
+
+.catalog-title {
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.control-title {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.control {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.filter-button {
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #82b3d3;
+}
+
+.reset-button {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* Сортировка и способ отображения */
+.cards-title {
+  font-size: 30px;
+  line-height: 36px;
+  color: #000;
+}
+
+.cards-sort {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333;
+}
+
+.cards-display {
+  text-align: center;
+}
+
+.display-button {
+  color: #000;
+}
+
+/* Карточки гостиниц */
+.card-link {
+  text-decoration: none;
+}
+
+.card-title {
+  color: #000;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.card-type,
+.card-price {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card-button {
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #756157;
+}
+
+.favorites-button {
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #82b3d3;
+}
+
+.favorites-button-active {
+  background-color: #7db54f;
+}
+
+.rating {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #f2f2f2;
+}
+
+/* Нумерация страниц */
+.pagination {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.pagination-link {
+  background-color: #82b3d3;
+  color: #fff;
+  text-decoration: none;
+}
+
+.pagination-link-current {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
 /* Подвал страницы */
 .phone-link {
   font-size: 40px;
   line-height: 40px;
   color: #000;
-  text-decoration: none;
 }
