@@ -70,8 +70,11 @@ body {
 
 /* Блок герой */
 .hero {
-  background: url("../images/index-hero-background.jpg") 0 0/cover no-repeat;
   text-align: center;
+}
+
+.hero-logo-wrapper {
+  background: url("../images/divider.svg") 0 bottom/100% no-repeat, url("../images/index-hero-background.jpg") 0 0/100% no-repeat;
 }
 
 .hero-wrapper {
@@ -86,7 +89,8 @@ body {
 }
 
 /* Особенности */
-.features-list {
+.features-list,
+.accommodations-list {
   list-style-type: none;
 }
 
