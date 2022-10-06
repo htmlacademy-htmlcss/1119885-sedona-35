@@ -1,6 +1,6 @@
 @font-face {
   font-family: "PT Sans";
-  src: url(../fonts/ptsans-400.woff2) format(woff2);
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url(../fonts/ptsans-700.woff2) format(woff2);
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -63,7 +63,7 @@ body {
 
 /* Блок герой */
 .hero {
-  background: url(../images/index-hero-background.jpg) 0 0/cover no-repeat;
+  background: url("../images/index-hero-background.jpg") 0 0/cover no-repeat;
   text-align: center;
 }
 
@@ -141,7 +141,7 @@ body {
 }
 
 .newsletter-background {
-  background: #82b3d3 url(../images/newsletter-background.jpg) 0 0/cover no-repeat;
+  background: #82b3d3 url("../images/newsletter-background.jpg") 0 0/cover no-repeat;
   color: #fff;
 }
 
@@ -172,7 +172,7 @@ body {
 /* Фильтрация гостиниц */
 .filter-wrapper {
   color: #fff;
-  background: #82b3d3 url(../images/catalog-header-background.jpg) 0 0/cover no-repeat;
+  background: #82b3d3 url("../images/catalog-header-background.jpg") 0 0/cover no-repeat;
 }
 
 .catalog-title {
@@ -289,4 +289,5 @@ body {
   font-size: 40px;
   line-height: 40px;
   color: #000;
+  text-decoration: none;
 }
