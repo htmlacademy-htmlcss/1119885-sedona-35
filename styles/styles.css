@@ -249,6 +249,33 @@ body {
   padding: 0;
 }
 
+.filter-form {
+  display: flex;
+}
+
+.filter-infrastructure,
+.filter-housing {
+  width: 150px;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-housing {
+  margin-left: 70px;
+}
+
+.filter-price {
+  width: 290px;
+  margin: 0;
+  padding: 0;
+  margin-left: 141px;
+}
+
+.filter-button-wrapper {
+  width: 200px;
+  margin-left: 70px;
+}
+
 .control-title {
   font-size: 20px;
   line-height: 24px;
