@@ -15,13 +15,33 @@
 }
 
 /* Общие правила */
+html {
+  height: 100%;
+}
+
 body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 22px;
   line-height: 26px;
 
+  height: 100%;
+  margin: 0;
+
   background-color: #f2f2f2;
   color: #333;
+}
+
+.page-wrapper {
+  background-color: #fff;
+  width: 1200px;
+  min-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .button {
@@ -32,15 +52,26 @@ body {
 }
 
 /* Шапка сайта */
-.header {
-  background-color: #fff;
-}
-
 .navigation {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   text-align: center;
+
+  display: flex;
+
+}
+
+.menu-wrapper {
+  width: 350px;
+  margin-left: 280px;
+}
+
+.user-menu-wrapper {
+  width: 280px;
+
+  margin-left: auto;
+  margin-right: 70px;
 }
 
 .navigation-link {
@@ -64,17 +95,13 @@ body {
 }
 
 /* Главная страница */
-.main {
-  background-color: #fff;
-}
-
 /* Блок герой */
 .hero {
   text-align: center;
 }
 
 .hero-logo-wrapper {
-  background: url("../images/divider.svg") 0 bottom/100% no-repeat, url("../images/index-hero-background.jpg") 0 0/100% no-repeat;
+  background: url("../images/divider.svg") 0 100%/100% no-repeat, url("../images/index-hero-background.jpg") 0 0/100% no-repeat;
 }
 
 .hero-wrapper {
@@ -92,11 +119,14 @@ body {
 .features-list,
 .accommodations-list {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .features-item,
 .accommodations-item {
   text-align: center;
+  width: 400px;
 }
 
 .features-title,
@@ -110,6 +140,11 @@ body {
 .accommodations-description {
   font-size: 18px;
   line-height: 21px;
+}
+
+.features-text-wrapper {
+  width: 230px;
+  margin: 0 auto;
 }
 
 .blue {
@@ -134,6 +169,11 @@ body {
   text-align: center;
 }
 
+.search-wrapper {
+  width: 600px;
+  margin: 0 auto;
+}
+
 .search-title {
   font-size: 30px;
   line-height: 36px;
@@ -154,6 +194,11 @@ body {
 .newsletter-background {
   background: #82b3d3 url("../images/newsletter-background.jpg") 0 0/cover no-repeat;
   color: #fff;
+}
+
+.newsletter-wrapper {
+  width: 480px;
+  margin: 0 auto;
 }
 
 .newsletter-title {
@@ -296,8 +341,12 @@ body {
 }
 
 /* Подвал страницы */
-.footer {
-  background-color: #fff;
+.footer-wrapper {
+  width: 1060px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .phone-link {
