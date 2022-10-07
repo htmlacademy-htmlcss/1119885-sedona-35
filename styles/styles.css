@@ -231,6 +231,11 @@ body {
   background: #82b3d3 url("../images/catalog-header-background.jpg") 0 0/cover no-repeat;
 }
 
+.filter-content-wrapper {
+  width: 1060px;
+  margin: 0 auto;
+}
+
 .catalog-title {
   font-size: 60px;
   line-height: 78px;
@@ -239,6 +244,7 @@ body {
 .breadcrumbs {
   font-size: 16px;
   line-height: 21px;
+  list-style-type: none;
 }
 
 .control-title {
@@ -263,10 +269,23 @@ body {
 }
 
 /* Сортировка и способ отображения */
+.sort-wrapper {
+  width: 1060px;
+  margin: 0 auto;
+
+  display: flex;
+}
+
+.cards-sort {
+  width: 292px;
+  margin-left: 200px;
+}
+
 .cards-title {
   font-size: 30px;
   line-height: 36px;
   color: #000;
+  text-transform: uppercase;
 }
 
 .cards-sort {
@@ -277,6 +296,8 @@ body {
 
 .cards-display {
   text-align: center;
+  width: 160px;
+  margin-left: 70px;
 }
 
 .display-button {
@@ -284,6 +305,11 @@ body {
 }
 
 /* Карточки гостиниц */
+.cards-wrapper {
+  width: 1060px;
+  margin: 0 auto;
+}
+
 .card-link {
   text-decoration: none;
 }
@@ -324,15 +350,30 @@ body {
 }
 
 /* Нумерация страниц */
-.pagination {
+.pagination-block {
   font-size: 20px;
   line-height: 36px;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.pagination {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .pagination-link {
+  width: 60px;
   background-color: #82b3d3;
   color: #fff;
   text-decoration: none;
+  text-align: center;
+}
+
+.pagination-spacing {
+  width: 60px;
+  text-align: center;
 }
 
 .pagination-link-current {
