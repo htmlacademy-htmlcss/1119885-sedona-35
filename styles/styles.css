@@ -102,6 +102,7 @@ body {
 
 .hero-logo-wrapper {
   background: url("../images/divider.svg") 0 100%/100% no-repeat, url("../images/index-hero-background.jpg") 0 0/100% no-repeat;
+  height: 485px;
 }
 
 .hero-wrapper {
@@ -245,6 +246,7 @@ body {
   font-size: 16px;
   line-height: 21px;
   list-style-type: none;
+  padding: 0;
 }
 
 .control-title {
