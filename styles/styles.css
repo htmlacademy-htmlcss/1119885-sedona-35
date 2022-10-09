@@ -52,26 +52,28 @@ body {
 }
 
 /* Шапка сайта */
+.header {
+  padding: 0 70px;
+  display: flex;
+}
+
 .navigation {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  text-align: center;
 
   display: flex;
-
+  justify-content: space-between;
+  flex-grow: 1;
+  align-items: center;
 }
 
-.menu-wrapper {
-  width: 350px;
-  margin-left: 280px;
+.navigation-logo {
+  margin-right: 30px;
 }
 
-.user-menu-wrapper {
-  width: 280px;
-
-  margin-left: auto;
-  margin-right: 70px;
+.menu-wrapper .navigation-link {
+  padding: 0 16px;
 }
 
 .navigation-link {
@@ -105,10 +107,6 @@ body {
   height: 485px;
 }
 
-.hero-wrapper {
-  background-color: #fff;
-}
-
 .hero-title {
   font-size: 30px;
   line-height: 36px;
@@ -128,6 +126,7 @@ body {
 .accommodations-item {
   text-align: center;
   width: 400px;
+  /* width убрать после добавления grid-сетки */
 }
 
 .features-title,
@@ -135,6 +134,7 @@ body {
   font-size: 24px;
   line-height: 28px;
   color: #000;
+  text-transform: uppercase;
 }
 
 .features-description,
@@ -144,8 +144,7 @@ body {
 }
 
 .features-text-wrapper {
-  width: 230px;
-  margin: 0 auto;
+  padding: 0 85px;
 }
 
 .blue {
@@ -168,17 +167,14 @@ body {
 /* Поиск гостиницы */
 .search {
   text-align: center;
-}
-
-.search-wrapper {
-  width: 600px;
-  margin: 0 auto;
+  padding: 0 305px;
 }
 
 .search-title {
   font-size: 30px;
   line-height: 36px;
   color: #000;
+  text-transform: uppercase;
 }
 
 .search-button {
@@ -190,6 +186,11 @@ body {
 /* Рассылка */
 .newsletter {
   text-align: center;
+  padding: 0 260px;
+}
+
+.newsletter-wrapper {
+ padding: 0 105px;
 }
 
 .newsletter-background {
@@ -197,15 +198,11 @@ body {
   color: #fff;
 }
 
-.newsletter-wrapper {
-  width: 480px;
-  margin: 0 auto;
-}
-
 .newsletter-title {
   font-size: 30px;
   line-height: 36px;
   color: #000;
+  text-transform: uppercase;
 }
 
 .newsletter-background .newsletter-title {
@@ -411,12 +408,11 @@ body {
 }
 
 /* Подвал страницы */
-.footer-wrapper {
-  width: 1060px;
-  margin: 0 auto;
 
+.footer {
   display: flex;
   justify-content: space-between;
+  padding: 0 70px;
 }
 
 .phone-link {
