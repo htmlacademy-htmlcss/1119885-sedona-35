@@ -49,6 +49,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
+  font-family: inherit;
 }
 
 /* Шапка сайта */
@@ -210,14 +211,13 @@ body {
 }
 
 .newsletter-button {
-  font-family: "PT Sans", "Arial", sans-serif;
   background-color: #82b3d3;
   font-size: 20px;
   line-height: 36px;
 }
 
 .newsletter-input {
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: inherit;
   font-size: 18px;
   line-height: 24px;
 }
@@ -227,11 +227,7 @@ body {
 .filter-wrapper {
   color: #fff;
   background: #82b3d3 url("../images/catalog-header-background.jpg") 0 0/cover no-repeat;
-}
-
-.filter-content-wrapper {
-  width: 1060px;
-  margin: 0 auto;
+  padding: 0 70px;
 }
 
 .catalog-title {
@@ -251,26 +247,28 @@ body {
 }
 
 .filter-infrastructure,
-.filter-housing {
+.filter-housing,
+.filter-price {
   width: 150px;
   padding: 0;
   margin: 0;
 }
 
+.filter-infrastructure {
+  margin-right: 70px;
+}
+
 .filter-housing {
-  margin-left: 70px;
+  margin-right: 140px;
 }
 
 .filter-price {
   width: 290px;
-  margin: 0;
-  padding: 0;
-  margin-left: 141px;
+  margin-right: 70px;
 }
 
 .filter-button-wrapper {
   width: 200px;
-  margin-left: 70px;
 }
 
 .control-title {
@@ -284,7 +282,6 @@ body {
 }
 
 .filter-button {
-  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   background-color: #82b3d3;
@@ -295,16 +292,12 @@ body {
 }
 
 /* Сортировка и способ отображения */
-.sort-wrapper {
-  width: 1060px;
-  margin: 0 auto;
-
-  display: flex;
+.cards {
+  padding: 0 70px;
 }
 
-.cards-sort {
-  width: 292px;
-  margin-left: 200px;
+.sort-wrapper {
+  display: flex;
 }
 
 .cards-title {
@@ -312,18 +305,22 @@ body {
   line-height: 36px;
   color: #000;
   text-transform: uppercase;
+  margin-right: 200px;
 }
 
 .cards-sort {
   font-size: 18px;
   line-height: 21px;
   color: #333;
+
+  width: 290px;
+  margin-right: 70px;
 }
 
 .cards-display {
   text-align: center;
   width: 160px;
-  margin-left: 70px;
+
 }
 
 .display-button {
@@ -331,11 +328,6 @@ body {
 }
 
 /* Карточки гостиниц */
-.cards-wrapper {
-  width: 1060px;
-  margin: 0 auto;
-}
-
 .card-link {
   text-decoration: none;
 }
@@ -379,8 +371,6 @@ body {
 .pagination-block {
   font-size: 20px;
   line-height: 36px;
-  width: 1060px;
-  margin: 0 auto;
 }
 
 .pagination {

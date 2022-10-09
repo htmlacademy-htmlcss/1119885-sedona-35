@@ -41,80 +41,79 @@
         <!-- Обертка блока фильтрации -->
         <div class="filter-wrapper">
           <!-- Обертка содержимого фильтриции -->
-          <div class="filter-content-wrapper">
-            <!-- Заголовок страницы -->
-            <header class="catalog-header">
-              <h1 class="catalog-title">Гостиницы Седоны</h1>
 
-              <!-- Хлебные крошки -->
-              <ul class="breadcrumbs">
-                <li class="breadcrumbs-item">
-                  <a class="breadcrumbs-link" href="index.html">
-                    <span class="visually-hidden">Главная</span>
-                  </a>
-                </li>
+          <!-- Заголовок страницы -->
+          <header class="catalog-header">
+            <h1 class="catalog-title">Гостиницы Седоны</h1>
 
-                <li class="breadcrumbs-item">
-                  <a class="breadcrumbs-link">Гостиницы</a>
-                </li>
-              </ul>
-            </header>
+            <!-- Хлебные крошки -->
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs-item">
+                <a class="breadcrumbs-link" href="index.html">
+                  <span class="visually-hidden">Главная</span>
+                </a>
+              </li>
 
-            <!-- Выбор фильтров -->
-            <section class="filter">
-              <h2 class="visually-hidden" hidden>Фильтрация гостиниц</h2>
-              <!-- Форма выбора фильтров-->
-              <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
-                <fieldset class="filter-infrastructure">
-                  <legend class="control-title">Инфраструктура:</legend>
+              <li class="breadcrumbs-item">
+                <a class="breadcrumbs-link">Гостиницы</a>
+              </li>
+            </ul>
+          </header>
 
-                  <label class="control">
-                    <input class="control-input" type="checkbox" name="pool" checked>
-                    Бассейн
-                  </label>
+          <!-- Выбор фильтров -->
+          <section class="filter">
+            <h2 class="visually-hidden" hidden>Фильтрация гостиниц</h2>
+            <!-- Форма выбора фильтров-->
+            <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
+              <fieldset class="filter-infrastructure">
+                <legend class="control-title">Инфраструктура:</legend>
 
-                  <label class="control">
-                    <input class="control-input" type="checkbox" name="parking" checked>
-                    Парковка
-                  </label>
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="pool" checked>
+                  Бассейн
+                </label>
 
-                  <label class="control">
-                    <input class="control-input" type="checkbox" name="wi-fi">
-                    Wi-Fi
-                  </label>
-                </fieldset>
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="parking" checked>
+                  Парковка
+                </label>
 
-                <fieldset class="filter-housing">
-                  <legend class="control-title">Тип Жилья:</legend>
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="wi-fi">
+                  Wi-Fi
+                </label>
+              </fieldset>
 
-                  <label class="control">
-                    <input class="control-input" type="radio" name="housing" value="hotel" checked>
-                    Гостинница
-                  </label>
+              <fieldset class="filter-housing">
+                <legend class="control-title">Тип Жилья:</legend>
 
-                  <label class="control">
-                    <input class="control-input" type="radio" name="housing" value="motel">
-                    Мотель
-                  </label>
+                <label class="control">
+                  <input class="control-input" type="radio" name="housing" value="hotel" checked>
+                  Гостинница
+                </label>
 
-                  <label class="control">
-                    <input class="control-input" type="radio" name="housing" value="apartments">
-                    Апартаменты
-                  </label>
-                </fieldset>
+                <label class="control">
+                  <input class="control-input" type="radio" name="housing" value="motel">
+                  Мотель
+                </label>
 
-                <fieldset class="filter-price">
-                  <legend class="control-title">Стоимость, ₽:</legend>
-                  <!-- пока не стал размечать стоимость -->
-                </fieldset>
-                <!-- Обертка кнопок -->
-                <div class="filter-button-wrapper">
-                  <button class="button filter-button" type="submit">Применить</button>
-                  <button class="button filter-button reset-button" type="reset">Сбросить</button>
-                </div>
-              </form>
-            </section>
-          </div>
+                <label class="control">
+                  <input class="control-input" type="radio" name="housing" value="apartments">
+                  Апартаменты
+                </label>
+              </fieldset>
+
+              <fieldset class="filter-price">
+                <legend class="control-title">Стоимость, ₽:</legend>
+                <!-- пока не стал размечать стоимость -->
+              </fieldset>
+              <!-- Обертка кнопок -->
+              <div class="filter-button-wrapper">
+                <button class="button filter-button" type="submit">Применить</button>
+                <button class="button filter-button reset-button" type="reset">Сбросить</button>
+              </div>
+            </form>
+          </section>
         </div>
         <!-- Каталог -->
         <section class="cards">
@@ -248,7 +247,7 @@
           <!-- Обертка текста рассылки -->
           <div class="newsletter-wrapper">
             <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
-            <p class="description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+            <p class="newsletter-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
           </div>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="newsletter-input" type="email" name="email" placeholder="Ваш e-mail">
@@ -259,36 +258,33 @@
 
       <!-- Подвал страницы -->
       <footer class="footer">
-        <!-- Обертка подвала -->
-        <div class="footer-wrapper">
-          <!-- Блок соц. сетей -->
-          <section class="social">
-            <h2 class="visually-hidden" hidden>Наши социальные сети</h2>
+        <!-- Блок соц. сетей -->
+        <section class="social">
+          <h2 class="visually-hidden" hidden>Наши социальные сети</h2>
 
-            <a class="social-link" href="https://vk.com/htmlacademy/">
-              <span class="visually-hidden">ВКонтакте</span>
-            </a>
+          <a class="social-link" href="https://vk.com/htmlacademy/">
+            <span class="visually-hidden">ВКонтакте</span>
+          </a>
 
-            <a class="social-link" href="https://t.me/htmlacademy/">
-              <span class="visually-hidden">Телеграм</span>
-            </a>
+          <a class="social-link" href="https://t.me/htmlacademy/">
+            <span class="visually-hidden">Телеграм</span>
+          </a>
 
-            <a class="social-link" href="https://www.youtube.com/user/htmlacademyru/">
-              <span class="visually-hidden">Youtube</span>
-            </a>
-          </section>
+          <a class="social-link" href="https://www.youtube.com/user/htmlacademyru/">
+            <span class="visually-hidden">Youtube</span>
+          </a>
+        </section>
 
-          <!-- Телефонный номер -->
-          <div class="phone">
-            <a class="phone-link" href="tel:88128121212">+7 (812) 812 12 12</a>
-          </div>
+        <!-- Телефонный номер -->
+        <div class="phone">
+          <a class="phone-link" href="tel:88128121212">+7 (812) 812 12 12</a>
+        </div>
 
-          <!-- HTML академия -->
-          <div class="partner">
-            <a class="partner-link" href="https://htmlacademy.ru/">
-              <span class="visually-hidden">HTML-Academy</span>
-            </a>
-          </div>
+        <!-- HTML академия -->
+        <div class="partner">
+          <a class="partner-link" href="https://htmlacademy.ru/">
+            <span class="visually-hidden">HTML-Academy</span>
+          </a>
         </div>
       </footer>
     </div>
