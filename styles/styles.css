@@ -31,6 +31,19 @@ body {
   color: #333;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .page-wrapper {
   background-color: #fff;
   width: 1200px;
@@ -58,6 +71,7 @@ body {
   display: flex;
 }
 
+/* Навигация */
 .navigation {
   font-size: 20px;
   line-height: 24px;
@@ -66,15 +80,34 @@ body {
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
-  align-items: center;
+}
+
+.navigation-logo-link {
+  margin-right: 28px;
 }
 
 .navigation-logo {
-  margin-right: 30px;
+  vertical-align: bottom;
+  position: relative;
+  margin-bottom: -6px;
+}
+
+.menu-wrapper {
+  width: 500px;
+}
+
+.menu-wrapper, .user-menu-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .menu-wrapper .navigation-link {
-  padding: 0 16px;
+  padding: 20px 16px;
+}
+
+.user-menu-wrapper .navigation-link {
+  padding: 0 13px;
 }
 
 .navigation-link {
@@ -95,6 +128,9 @@ body {
   background-color: #756157;
   font-size: 16px;
   line-height: 20px;
+
+  padding: 8px 34px;
+  border-radius: 4px;
 }
 
 /* Главная страница */
@@ -105,7 +141,14 @@ body {
 
 .hero-logo-wrapper {
   background: url("../images/divider.svg") 0 100%/100% no-repeat, url("../images/index-hero-background.jpg") 0 0/100% no-repeat;
-  height: 485px;
+  padding-top: 52px;
+  padding-bottom: 75px;
+}
+
+/* Обнуление отступов */
+.hero-description,
+.hero-title {
+  margin: 0;
 }
 
 .hero-title {
@@ -113,6 +156,12 @@ body {
   line-height: 36px;
   color: #000;
   text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.hero-description-wrapper {
+  padding-top: 69px;
+  padding-bottom: 90px;
 }
 
 /* Особенности */
