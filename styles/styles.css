@@ -96,7 +96,8 @@ body {
   width: 500px;
 }
 
-.menu-wrapper, .user-menu-wrapper {
+.menu-wrapper,
+.user-menu-wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -107,7 +108,9 @@ body {
 }
 
 .user-menu-wrapper .navigation-link {
-  padding: 0 13px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  min-width: 44px;
 }
 
 .navigation-link {
@@ -185,16 +188,24 @@ body {
   line-height: 28px;
   color: #000;
   text-transform: uppercase;
+
+  margin: 0;
+  margin-bottom: 62px;
+}
+
+.accommodations-title {
+  margin-bottom: 30px;
 }
 
 .features-description,
 .accommodations-description {
   font-size: 18px;
   line-height: 21px;
+  margin: 0;
 }
 
 .features-text-wrapper {
-  padding: 0 85px;
+  padding: 92px 85px 110px;
 }
 
 .blue {
@@ -217,7 +228,7 @@ body {
 /* Поиск гостиницы */
 .search {
   text-align: center;
-  padding: 0 305px;
+  padding: 96px 304px;
 }
 
 .search-title {
@@ -225,26 +236,37 @@ body {
   line-height: 36px;
   color: #000;
   text-transform: uppercase;
+
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.search-description {
+  margin-bottom: 54px;
 }
 
 .search-button {
   font-size: 20px;
   line-height: 36px;
   background-color: #756157;
+
+  padding: 8px 50px;
+  border-radius: 4px;
 }
 
 /* Рассылка */
 .newsletter {
   text-align: center;
-  padding: 0 260px;
+  padding: 96px 260px 104px;
 }
 
 .newsletter-wrapper {
- padding: 0 105px;
+  padding: 0 105px;
+  margin-bottom: 54px;
 }
 
 .newsletter-background {
-  background: #82b3d3 url("../images/newsletter-background.jpg") 0 0/cover no-repeat;
+  background: #82b3d3 url("../images/newsletter-background.jpg") 0 15%/cover no-repeat;
   color: #fff;
 }
 
@@ -253,22 +275,44 @@ body {
   line-height: 36px;
   color: #000;
   text-transform: uppercase;
+
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.newsletter-description {
+  margin: 0;
 }
 
 .newsletter-background .newsletter-title {
   color: #fff;
 }
 
+.newsletter-form {
+  display: flex;
+}
+
 .newsletter-button {
   background-color: #82b3d3;
   font-size: 20px;
   line-height: 36px;
+
+  padding: 8px 50px;
+  border: none;
+  border-radius: 0 4px 4px 0;
 }
 
 .newsletter-input {
+  background-color: #f2f2f2;
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
+
+  padding: 14px 20px;
+  border-radius: 4px 0 0 4px;
+  border: none;
+
+  flex-grow: 1;
 }
 
 /* Страница каталога */
@@ -451,7 +495,12 @@ body {
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 0 70px;
+  padding: 45px 70px 35px;
+}
+
+.social-link {
+  min-width: 47px;
+  min-height: 40px;
 }
 
 .phone-link {
@@ -459,4 +508,9 @@ body {
   line-height: 40px;
   color: #000;
   text-decoration: none;
+}
+
+.partner-link {
+  min-width: 115px;
+  min-height: 33px;
 }
