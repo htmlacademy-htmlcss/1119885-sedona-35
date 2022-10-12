@@ -320,21 +320,29 @@ body {
 .filter-wrapper {
   color: #fff;
   background: #82b3d3 url("../images/catalog-header-background.jpg") 0 0/cover no-repeat;
-  padding: 0 70px;
+  padding: 35px 70px 70px;
 }
 
+/* Заголовок и хлебные крошки */
 .catalog-title {
   font-size: 60px;
   line-height: 78px;
+
+  margin: 0;
+  margin-bottom: 8px;
 }
 
 .breadcrumbs {
   font-size: 16px;
   line-height: 21px;
   list-style-type: none;
+
   padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
 }
 
+/* Форма фильтрации */
 .filter-form {
   display: flex;
 }
@@ -342,9 +350,11 @@ body {
 .filter-infrastructure,
 .filter-housing,
 .filter-price {
-  width: 150px;
+  min-width: 150px;
+  min-height: 160px;
   padding: 0;
   margin: 0;
+  border: none;
 }
 
 .filter-infrastructure {
@@ -356,17 +366,21 @@ body {
 }
 
 .filter-price {
-  width: 290px;
+  min-width: 290px;
   margin-right: 70px;
 }
 
-.filter-button-wrapper {
-  width: 200px;
+.control-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .control-title {
   font-size: 20px;
   line-height: 24px;
+  font-weight: 700;
+
+  margin-bottom: 32px;
 }
 
 .control {
@@ -374,14 +388,28 @@ body {
   line-height: 23px;
 }
 
+.control:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+/* Кнопки формы */
+.filter-button-wrapper {
+  align-self: flex-end;
+}
+
 .filter-button {
   font-size: 16px;
   line-height: 20px;
   background-color: #82b3d3;
+
+  padding: 8px 50px;
+  border: none;
+  border-radius: 4px;
 }
 
 .reset-button {
   background-color: rgba(0, 0, 0, 0);
+  padding: 8px 57px;
 }
 
 /* Сортировка и способ отображения */

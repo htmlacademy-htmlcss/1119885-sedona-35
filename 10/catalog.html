@@ -66,40 +66,42 @@
             <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
               <fieldset class="filter-infrastructure">
                 <legend class="control-title">Инфраструктура:</legend>
+                <div class="control-wrapper">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="pool" checked>
+                    Бассейн
+                  </label>
 
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="pool" checked>
-                  Бассейн
-                </label>
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="parking" checked>
+                    Парковка
+                  </label>
 
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="parking" checked>
-                  Парковка
-                </label>
-
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="wi-fi">
-                  Wi-Fi
-                </label>
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="wi-fi">
+                    Wi-Fi
+                  </label>
+                </div>
               </fieldset>
 
               <fieldset class="filter-housing">
                 <legend class="control-title">Тип Жилья:</legend>
+                <div class="control-wrapper">
+                  <label class="control">
+                    <input class="control-input" type="radio" name="housing" value="hotel" checked>
+                    Гостинница
+                  </label>
 
-                <label class="control">
-                  <input class="control-input" type="radio" name="housing" value="hotel" checked>
-                  Гостинница
-                </label>
+                  <label class="control">
+                    <input class="control-input" type="radio" name="housing" value="motel">
+                    Мотель
+                  </label>
 
-                <label class="control">
-                  <input class="control-input" type="radio" name="housing" value="motel">
-                  Мотель
-                </label>
-
-                <label class="control">
-                  <input class="control-input" type="radio" name="housing" value="apartments">
-                  Апартаменты
-                </label>
+                  <label class="control">
+                    <input class="control-input" type="radio" name="housing" value="apartments">
+                    Апартаменты
+                  </label>
+                </div>
               </fieldset>
 
               <fieldset class="filter-price">
