@@ -63,6 +63,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   font-family: inherit;
+  border-radius: 4px;
 }
 
 /* Шапка сайта */
@@ -133,7 +134,6 @@ body {
   line-height: 20px;
 
   padding: 8px 34px;
-  border-radius: 4px;
 }
 
 /* Главная страница */
@@ -251,7 +251,6 @@ body {
   background-color: #756157;
 
   padding: 8px 50px;
-  border-radius: 4px;
 }
 
 /* Рассылка */
@@ -404,7 +403,6 @@ body {
 
   padding: 8px 50px;
   border: none;
-  border-radius: 4px;
 }
 
 .reset-button {
@@ -414,11 +412,12 @@ body {
 
 /* Сортировка и способ отображения */
 .cards {
-  padding: 0 70px;
+  padding: 50px 70px 60px;
 }
 
 .sort-wrapper {
   display: flex;
+  margin-bottom: 40px;
 }
 
 .cards-title {
@@ -426,6 +425,8 @@ body {
   line-height: 36px;
   color: #000;
   text-transform: uppercase;
+
+  margin: 0;
   margin-right: 200px;
 }
 
@@ -449,14 +450,53 @@ body {
 }
 
 /* Карточки гостиниц */
+.cards-wrapper {
+  margin-bottom: 80px;
+}
+
+.card {
+  /* Временная ширина */
+  width: 340px;
+  min-height: 438px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.card-description,
+.card-button-wrapper,
+.star-rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Картинка и название */
 .card-link {
   text-decoration: none;
+}
+
+.card-image {
+  margin-bottom: 16px;
+  vertical-align: bottom;
 }
 
 .card-title {
   color: #000;
   font-size: 24px;
   line-height: 28px;
+  margin: 0;
+}
+
+/* Тип, цена */
+.card-description {
+  margin: 0;
 }
 
 .card-type,
@@ -465,20 +505,31 @@ body {
   line-height: 21px;
 }
 
+/* Кнопки */
 .card-button {
   font-size: 16px;
   line-height: 20px;
   background-color: #756157;
+
+  padding: 8px 26px;
 }
 
 .favorites-button {
   font-size: 16px;
   line-height: 20px;
   background-color: #82b3d3;
+
+  padding: 8px 20px;
 }
 
 .favorites-button-active {
   background-color: #7db54f;
+  padding: 8px 18px;
+}
+
+/* Рейтинг */
+.star-rating {
+  margin: 0;
 }
 
 .rating {
@@ -486,6 +537,9 @@ body {
   font-size: 16px;
   line-height: 20px;
   background-color: #f2f2f2;
+
+  border-radius: 4px;
+  padding: 8px 22px;
 }
 
 /* Нумерация страниц */
@@ -506,11 +560,16 @@ body {
   color: #fff;
   text-decoration: none;
   text-align: center;
+
+  padding: 12px 0;
+  border-radius: 4px;
 }
 
 .pagination-spacing {
   width: 60px;
   text-align: center;
+
+  padding: 12px 0;
 }
 
 .pagination-link-current {
