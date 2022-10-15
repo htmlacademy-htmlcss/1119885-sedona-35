@@ -64,6 +64,8 @@ body {
   font-weight: 700;
   font-family: inherit;
   border-radius: 4px;
+
+  cursor: pointer;
 }
 
 /* Шапка сайта */
@@ -126,6 +128,9 @@ body {
   font-weight: 400;
   font-size: 10px;
   line-height: 10px;
+
+  border-radius: 10px;
+  padding: 4px 5px;
 }
 
 .navigation-button {
@@ -393,7 +398,12 @@ body {
 
 /* Кнопки формы */
 .filter-button-wrapper {
+  min-height: 104px;
   align-self: flex-end;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .filter-button {
@@ -428,6 +438,8 @@ body {
 
   margin: 0;
   margin-right: 200px;
+
+  align-self: center;
 }
 
 .cards-sort {
@@ -435,8 +447,13 @@ body {
   line-height: 21px;
   color: #333;
 
+  box-sizing: border-box;
   width: 290px;
   margin-right: 70px;
+  padding: 12px 20px;
+
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
 }
 
 .cards-display {
@@ -543,19 +560,17 @@ body {
 }
 
 /* Нумерация страниц */
-.pagination-block {
+.pagination {
   font-size: 20px;
   line-height: 36px;
-}
 
-.pagination {
-  width: 400px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .pagination-link {
-  width: 60px;
+  min-width: 60px;
   background-color: #82b3d3;
   color: #fff;
   text-decoration: none;
@@ -566,7 +581,7 @@ body {
 }
 
 .pagination-spacing {
-  width: 60px;
+  min-width: 60px;
   text-align: center;
 
   padding: 12px 0;
