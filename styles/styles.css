@@ -93,6 +93,7 @@ body {
   vertical-align: bottom;
   position: relative;
   margin-bottom: -6px;
+  object-fit: contain;
 }
 
 .menu-wrapper {
@@ -148,7 +149,7 @@ body {
 }
 
 .hero-logo-wrapper {
-  background: url("../images/divider.svg") 0 100%/100% no-repeat, url("../images/index-hero-background.jpg") 0 0/100% no-repeat;
+  background: url("../images/divider.svg") 0 100%/100% no-repeat, url("../images/index-hero-background.jpg") 0 0/cover no-repeat;
   padding-top: 52px;
   padding-bottom: 75px;
 }
@@ -168,25 +169,70 @@ body {
 }
 
 .hero-description-wrapper {
-  padding-top: 69px;
-  padding-bottom: 90px;
+  padding: 69px 270px 90px;
 }
 
+
 /* Особенности */
+
+/* Обнуление параметров про умолчанию */
 .features-list,
 .accommodations-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
+
 }
 
-.features-item,
-.accommodations-item {
+/* Грид сетка */
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, min-content);
+}
+
+.accommodations-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Отступы и текст */
+.features-text-wrapper,
+.accommodations-text-wrapper {
   text-align: center;
-  width: 400px;
-  /* width убрать после добавления grid-сетки */
+  box-sizing: border-box;
+  padding: 92px 85px 110px;
+  min-height: 384px;
 }
 
+.accommodations-text-wrapper {
+  padding: 80px 85px;
+}
+
+/* Цвет */
+.blue-flex {
+  background-color: #82b3d3;
+  color: #fff;
+
+  grid-column: 1 / -1;
+
+  /* Флекс для правильного расположения картинки */
+  display: flex;
+}
+
+.blue-flex .features-title {
+  color: inherit;
+}
+
+.white {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.grey {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+/* Заголовки */
 .features-title,
 .accommodations-title {
   font-size: 24px;
@@ -198,10 +244,24 @@ body {
   margin-bottom: 62px;
 }
 
+.features-title {
+  max-width: 175px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .accommodations-title {
   margin-bottom: 30px;
 }
 
+/* Картинки */
+.features-image {
+  display: block;
+  min-height: 100%;
+  object-fit: contain;
+}
+
+/* Описания */
 .features-description,
 .accommodations-description {
   font-size: 18px;
@@ -209,26 +269,6 @@ body {
   margin: 0;
 }
 
-.features-text-wrapper {
-  padding: 92px 85px 110px;
-}
-
-.blue {
-  background-color: #82b3d3;
-  color: #fff;
-}
-
-.blue .features-title {
-  color: inherit;
-}
-
-.white {
-  background-color: rgba(131, 179, 211, 0.12);
-}
-
-.grey {
-  background-color: rgba(131, 179, 211, 0.2);
-}
 
 /* Поиск гостиницы */
 .search {
@@ -502,6 +542,8 @@ body {
 .card-image {
   margin-bottom: 16px;
   vertical-align: bottom;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .card-title {
