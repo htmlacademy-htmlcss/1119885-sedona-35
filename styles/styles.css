@@ -478,6 +478,7 @@ body {
   padding: 50px 70px 60px;
 }
 
+/* Сортировка */
 .sort-wrapper {
   display: flex;
   margin-bottom: 40px;
@@ -500,10 +501,9 @@ body {
   line-height: 21px;
   color: #333;
 
-  box-sizing: border-box;
   width: 290px;
   margin-right: 70px;
-  padding: 12px 20px;
+  padding: 12px 15px;
 
   border: 2px solid #e5e5e5;
   border-radius: 4px;
@@ -522,11 +522,13 @@ body {
 /* Карточки гостиниц */
 .cards-wrapper {
   margin-bottom: 80px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .card {
-  /* Временная ширина */
-  width: 340px;
   min-height: 438px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
@@ -554,7 +556,9 @@ body {
 
 .card-image {
   margin-bottom: 16px;
-  vertical-align: bottom;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 100%;
   object-fit: contain;
 }
@@ -604,6 +608,16 @@ body {
   margin: 0;
 }
 
+
+.stars {
+  display: flex;
+}
+
+.star {
+  display: block;
+  padding: 10px 6px 10px 0;
+}
+
 .rating {
   text-transform: uppercase;
   font-size: 16px;
@@ -611,7 +625,7 @@ body {
   background-color: #f2f2f2;
 
   border-radius: 4px;
-  padding: 8px 22px;
+  padding: 9px 22px 8px;
 }
 
 /* Нумерация страниц */
