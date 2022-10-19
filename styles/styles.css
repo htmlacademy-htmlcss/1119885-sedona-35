@@ -58,13 +58,15 @@ body {
 }
 
 .button {
+  display: inline-block;
   color: #fff;
   text-decoration: none;
+  text-align: center;
   text-transform: uppercase;
   font-weight: 700;
   font-family: inherit;
   border-radius: 4px;
-
+  padding: 8px 0;
   cursor: pointer;
 }
 
@@ -87,12 +89,13 @@ body {
 
 .navigation-logo-link {
   margin-right: 28px;
+  position: relative;
 }
 
 .navigation-logo {
-  vertical-align: bottom;
-  position: relative;
+  display: block;
   margin-bottom: -6px;
+  object-fit: contain;
 }
 
 .menu-wrapper {
@@ -148,7 +151,7 @@ body {
 }
 
 .hero-logo-wrapper {
-  background: url("../images/divider.svg") 0 100%/100% no-repeat, url("../images/index-hero-background.jpg") 0 0/100% no-repeat;
+  background: url("../images/divider.svg") 0 100%/100% no-repeat, url("../images/index-hero-background.jpg") 0 0/cover no-repeat;
   padding-top: 52px;
   padding-bottom: 75px;
 }
@@ -168,25 +171,71 @@ body {
 }
 
 .hero-description-wrapper {
-  padding-top: 69px;
-  padding-bottom: 90px;
+  padding: 69px 270px 90px;
 }
 
+
 /* Особенности */
+
+/* Обнуление параметров про умолчанию */
 .features-list,
 .accommodations-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
+
 }
 
-.features-item,
-.accommodations-item {
+/* Грид сетка */
+.features-list,
+.accommodations-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Отступы и текст */
+.features-text-wrapper,
+.accommodations-text-wrapper {
   text-align: center;
-  width: 400px;
-  /* width убрать после добавления grid-сетки */
+  box-sizing: border-box;
+  padding: 103px 85px 110px;
+  min-height: 384px;
 }
 
+.accommodations-text-wrapper {
+  padding: 80px 85px;
+}
+
+/* Цвет */
+/* Голубые блоки */
+.blue-flex {
+  background-color: #82b3d3;
+  color: #fff;
+
+  grid-column: 1 / -1;
+
+  /* Флекс для правильного расположения картинки */
+  display: flex;
+}
+
+.blue-flex .features-title {
+  color: inherit;
+}
+
+.blue-flex .features-text-wrapper {
+  padding-top: 92px;
+}
+
+/* Остальные блоки */
+.white {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.grey {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+/* Заголовки */
 .features-title,
 .accommodations-title {
   font-size: 24px;
@@ -198,10 +247,24 @@ body {
   margin-bottom: 62px;
 }
 
+.features-title {
+  max-width: 172px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .accommodations-title {
   margin-bottom: 30px;
 }
 
+/* Картинки */
+.features-image {
+  display: block;
+  min-height: 100%;
+  object-fit: contain;
+}
+
+/* Описания */
 .features-description,
 .accommodations-description {
   font-size: 18px;
@@ -209,31 +272,16 @@ body {
   margin: 0;
 }
 
-.features-text-wrapper {
-  padding: 92px 85px 110px;
-}
-
-.blue {
-  background-color: #82b3d3;
-  color: #fff;
-}
-
-.blue .features-title {
-  color: inherit;
-}
-
-.white {
-  background-color: rgba(131, 179, 211, 0.12);
-}
-
-.grey {
-  background-color: rgba(131, 179, 211, 0.2);
-}
 
 /* Поиск гостиницы */
 .search {
   text-align: center;
   padding: 96px 304px;
+}
+
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .search-title {
@@ -247,6 +295,7 @@ body {
 }
 
 .search-description {
+  margin: 0;
   margin-bottom: 54px;
 }
 
@@ -255,13 +304,14 @@ body {
   line-height: 36px;
   background-color: #756157;
 
+  align-self: center;
   padding: 8px 50px;
 }
 
 /* Рассылка */
 .newsletter {
   text-align: center;
-  padding: 96px 260px 104px;
+  padding: 96px 258px 104px;
 }
 
 .newsletter-wrapper {
@@ -270,7 +320,7 @@ body {
 }
 
 .newsletter-background {
-  background: #82b3d3 url("../images/newsletter-background.jpg") 0 15%/cover no-repeat;
+  background: #82b3d3 url("../images/newsletter-background.jpg") 0 0/cover no-repeat;
   color: #fff;
 }
 
@@ -292,6 +342,7 @@ body {
   color: #fff;
 }
 
+/* Форма рассылки */
 .newsletter-form {
   display: flex;
 }
@@ -304,6 +355,7 @@ body {
   padding: 8px 50px;
   border: none;
   border-radius: 0 4px 4px 0;
+
 }
 
 .newsletter-input {
@@ -425,6 +477,7 @@ body {
   padding: 50px 70px 60px;
 }
 
+/* Сортировка */
 .sort-wrapper {
   display: flex;
   margin-bottom: 40px;
@@ -447,19 +500,18 @@ body {
   line-height: 21px;
   color: #333;
 
-  box-sizing: border-box;
   width: 290px;
-  margin-right: 70px;
-  padding: 12px 20px;
+  padding: 12px 15px;
 
   border: 2px solid #e5e5e5;
   border-radius: 4px;
 }
 
+/* Отображение карточек */
 .cards-display {
   text-align: center;
   width: 160px;
-
+  margin-left: auto;
 }
 
 .display-button {
@@ -469,39 +521,34 @@ body {
 /* Карточки гостиниц */
 .cards-wrapper {
   margin-bottom: 80px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .card {
-  /* Временная ширина */
-  width: 340px;
   min-height: 438px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
   box-sizing: border-box;
-
   padding: 20px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-
-.card-description,
-.card-button-wrapper,
-.star-rating {
-  display: flex;
-  justify-content: space-between;
 }
 
 /* Картинка и название */
 .card-link {
+  display: block;
   text-decoration: none;
+  margin-bottom: 16px;
 }
 
 .card-image {
   margin-bottom: 16px;
-  vertical-align: bottom;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .card-title {
@@ -511,15 +558,23 @@ body {
   margin: 0;
 }
 
-/* Тип, цена */
-.card-description {
-  margin: 0;
+/* Описание */
+.description-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 16px 20px;
 }
 
+/* Тип, цена */
 .card-type,
 .card-price {
   font-size: 18px;
   line-height: 21px;
+}
+
+.card-price {
+  text-align: right;
 }
 
 /* Кнопки */
@@ -527,36 +582,36 @@ body {
   font-size: 16px;
   line-height: 20px;
   background-color: #756157;
-
-  padding: 8px 26px;
 }
 
 .favorites-button {
   font-size: 16px;
   line-height: 20px;
   background-color: #82b3d3;
-
-  padding: 8px 20px;
 }
 
 .favorites-button-active {
   background-color: #7db54f;
-  padding: 8px 18px;
 }
 
 /* Рейтинг */
-.star-rating {
-  margin: 0;
+.stars {
+  display: flex;
+}
+
+.star {
+  display: block;
+  padding: 10px 6px 10px 0;
 }
 
 .rating {
   text-transform: uppercase;
+  text-align: center;
   font-size: 16px;
   line-height: 20px;
   background-color: #f2f2f2;
-
+  padding: 8px 0;
   border-radius: 4px;
-  padding: 8px 22px;
 }
 
 /* Нумерация страниц */
@@ -566,7 +621,6 @@ body {
 
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
 }
 
 .pagination-link {
@@ -592,8 +646,13 @@ body {
   color: #000;
 }
 
-/* Подвал страницы */
+/* Отступы */
+.pagination-spacing,
+.pagination-link:not(:last-of-type) {
+  margin-right: 8px;
+}
 
+/* Подвал страницы */
 .footer {
   display: flex;
   justify-content: space-between;
