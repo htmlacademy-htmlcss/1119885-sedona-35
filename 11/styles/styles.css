@@ -58,13 +58,15 @@ body {
 }
 
 .button {
+  display: inline-block;
   color: #fff;
   text-decoration: none;
+  text-align: center;
   text-transform: uppercase;
   font-weight: 700;
   font-family: inherit;
   border-radius: 4px;
-
+  padding: 8px 0;
   cursor: pointer;
 }
 
@@ -87,11 +89,11 @@ body {
 
 .navigation-logo-link {
   margin-right: 28px;
+  position: relative;
 }
 
 .navigation-logo {
-  vertical-align: bottom;
-  position: relative;
+  display: block;
   margin-bottom: -6px;
   object-fit: contain;
 }
@@ -185,12 +187,7 @@ body {
 }
 
 /* Грид сетка */
-.features-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, min-content);
-}
-
+.features-list,
 .accommodations-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -345,6 +342,7 @@ body {
   color: #fff;
 }
 
+/* Форма рассылки */
 .newsletter-form {
   display: flex;
 }
@@ -357,6 +355,7 @@ body {
   padding: 8px 50px;
   border: none;
   border-radius: 0 4px 4px 0;
+
 }
 
 .newsletter-input {
@@ -502,17 +501,17 @@ body {
   color: #333;
 
   width: 290px;
-  margin-right: 70px;
   padding: 12px 15px;
 
   border: 2px solid #e5e5e5;
   border-radius: 4px;
 }
 
+/* Отображение карточек */
 .cards-display {
   text-align: center;
   width: 160px;
-
+  margin-left: auto;
 }
 
 .display-button {
@@ -533,25 +532,14 @@ body {
   border: 1px solid #E6E6E6;
   border-radius: 4px;
   box-sizing: border-box;
-
   padding: 20px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-
-.card-description,
-.card-button-wrapper,
-.star-rating {
-  display: flex;
-  justify-content: space-between;
 }
 
 /* Картинка и название */
 .card-link {
+  display: block;
   text-decoration: none;
+  margin-bottom: 16px;
 }
 
 .card-image {
@@ -570,15 +558,23 @@ body {
   margin: 0;
 }
 
-/* Тип, цена */
-.card-description {
-  margin: 0;
+/* Описание */
+.description-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 16px 20px;
 }
 
+/* Тип, цена */
 .card-type,
 .card-price {
   font-size: 18px;
   line-height: 21px;
+}
+
+.card-price {
+  text-align: right;
 }
 
 /* Кнопки */
@@ -586,29 +582,19 @@ body {
   font-size: 16px;
   line-height: 20px;
   background-color: #756157;
-
-  padding: 8px 26px;
 }
 
 .favorites-button {
   font-size: 16px;
   line-height: 20px;
   background-color: #82b3d3;
-
-  padding: 8px 20px;
 }
 
 .favorites-button-active {
   background-color: #7db54f;
-  padding: 8px 18px;
 }
 
 /* Рейтинг */
-.star-rating {
-  margin: 0;
-}
-
-
 .stars {
   display: flex;
 }
@@ -620,12 +606,12 @@ body {
 
 .rating {
   text-transform: uppercase;
+  text-align: center;
   font-size: 16px;
   line-height: 20px;
   background-color: #f2f2f2;
-
+  padding: 8px 0;
   border-radius: 4px;
-  padding: 9px 22px 8px;
 }
 
 /* Нумерация страниц */
@@ -635,7 +621,6 @@ body {
 
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
 }
 
 .pagination-link {
@@ -661,8 +646,13 @@ body {
   color: #000;
 }
 
-/* Подвал страницы */
+/* Отступы */
+.pagination-spacing,
+.pagination-link:not(:last-of-type) {
+  margin-right: 8px;
+}
 
+/* Подвал страницы */
 .footer {
   display: flex;
   justify-content: space-between;
