@@ -1,0 +1,928 @@
+/* Шрифты */
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Общие правила */
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  height: 100%;
+  margin: 0;
+
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page-wrapper {
+  background-color: #fff;
+  width: 1200px;
+  min-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.button {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: inherit;
+  border-radius: 4px;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+/* Зеленые кнопки */
+.button-dark-green:hover,
+.button-dark-green:focus {
+  background-color: #615048;
+}
+
+.button-dark-green:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Голубые кнопки */
+.button-blue:hover,
+.button-blue:focus {
+  background-color: #68a2ca;
+}
+
+.button-blue:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button[disabled] {
+  background-color: #e5e5e5;
+  color: #fff;
+}
+
+/* Шапка сайта */
+.header {
+  padding: 0 70px;
+  display: flex;
+}
+
+/* Навигация */
+.navigation {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+/* Логотип */
+.navigation-logo-link {
+  margin-right: 28px;
+  position: relative;
+}
+
+.navigation-logo {
+  display: block;
+  margin-bottom: -6px;
+  object-fit: contain;
+}
+
+/* Меню навигации */
+.menu-wrapper {
+  width: 500px;
+}
+
+.menu-wrapper,
+.user-menu-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Ссылки меню */
+.navigation-link {
+  color: #000;
+  text-decoration: none;
+  position: relative;
+}
+
+.menu-wrapper .navigation-link {
+  padding: 20px 16px;
+}
+
+.user-menu-wrapper .navigation-link {
+  box-sizing: border-box;
+  padding: 0 12px;
+  min-width: 44px;
+  min-height: 64px;
+}
+
+/* Текущая страница */
+.navigation-link-current::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 0;
+  margin-bottom: -1px;
+  min-height: 2px;
+  background-color: #756157;
+}
+
+/* Состояния */
+.navigation-link:not(.navigation-link-current):hover,
+.navigation-link:not(.navigation-link-current):focus {
+  background-color: #F5F5F5;
+}
+
+.navigation-link:not(.navigation-link-current):active .menu-span {
+  opacity: 0.5;
+}
+
+.navigation-link:active svg {
+  fill: rgba(0, 0, 0, 0.5);
+}
+
+/* Иконки */
+.search-icon,
+.favorites-icon {
+  fill: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  margin-left: -9px;
+  margin-top: -9px;
+}
+
+.favorites-count {
+  color: #fff;
+  background-color: #7db54f;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 10px;
+  width: 20px;
+  min-height: 20px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  padding: 5px;
+  position: absolute;
+  top: 11px;
+  left: 21px;
+
+}
+
+/* Кнопка */
+.navigation-button {
+  background-color: #756157;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px 34px;
+  margin-left: 20px;
+}
+
+/* Главная страница */
+/* Блок герой */
+.hero {
+  text-align: center;
+}
+
+.hero-logo-wrapper {
+  background: url("../images/divider.svg") 0 100%/100% no-repeat, url("../images/index-hero-background.jpg") 0 0/cover no-repeat;
+  padding-top: 52px;
+  padding-bottom: 75px;
+}
+
+/* Обнуление отступов */
+.hero-description,
+.hero-title {
+  margin: 0;
+}
+
+/* Текст */
+.hero-title {
+  font-size: 30px;
+  line-height: 36px;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.hero-description-wrapper {
+  padding: 69px 270px 90px;
+}
+
+
+/* Особенности */
+/* Обнуление параметров про умолчанию */
+.features-list,
+.accommodations-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Грид сетка */
+.features-list,
+.accommodations-list {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+}
+
+/* Иконки */
+.accommodations-item:nth-child(1) {
+  background: rgba(131, 179, 211, 0.12) url('../images/advantages-icons/house-icon.svg') 50% 25% no-repeat;
+}
+
+.accommodations-item:nth-child(2) {
+  background: url('../images/advantages-icons/food-icon.svg') 50% 26% no-repeat;
+}
+
+.accommodations-item:nth-child(3) {
+  background: rgba(131, 179, 211, 0.12) url('../images/advantages-icons/gift-icon.svg') 50% 25% no-repeat;
+}
+
+/* Отступы и текстовый блок */
+.features-text-wrapper,
+.accommodations-text-wrapper {
+  text-align: center;
+  box-sizing: border-box;
+  padding: 103px 85px 110px;
+  min-height: 384px;
+  position: relative;
+}
+
+.features-text-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.accommodations-text-wrapper {
+  padding: 80px 85px;
+}
+
+/* Голубые блоки */
+.blue-flex {
+  background-color: #82b3d3;
+  color: #fff;
+  grid-column: 1 / -1;
+  display: flex;
+}
+
+.blue-flex .features-title {
+  color: inherit;
+}
+
+.blue-flex .features-text-wrapper {
+  padding-top: 92px;
+}
+
+.features-item:not(.blue-flex):nth-child(odd) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.features-item:not(.blue-flex):nth-child(even) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+/* Заголовки */
+.features-title,
+.accommodations-title {
+  font-size: 24px;
+  line-height: 28px;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.features-title {
+  max-width: 172px;
+  margin-left: auto;
+  margin-right: auto;
+  order: 1;
+}
+
+.accommodations-title {
+  margin-bottom: 30px;
+  margin-top: 102px;
+}
+
+/* Картинки */
+.features-image {
+  display: block;
+  min-height: 100%;
+  object-fit: contain;
+}
+
+/* Описания */
+.features-description,
+.accommodations-description {
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0;
+}
+
+.features-description {
+  order: 3;
+}
+
+/* Декоративная полоса */
+.features-text-wrapper::before {
+  content: "";
+  width: 60px;
+  min-height: 2px;
+  margin: 0 auto 30px;
+  order: 2;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.blue-flex .features-text-wrapper::before {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Поиск гостиницы */
+.search {
+  text-align: center;
+  padding: 96px 304px;
+}
+
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-title {
+  font-size: 30px;
+  line-height: 36px;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.search-description {
+  margin: 0;
+  margin-bottom: 54px;
+}
+
+.search-button {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #756157;
+  align-self: center;
+  padding: 8px 50px;
+}
+
+/* Рассылка */
+.newsletter {
+  text-align: center;
+  padding: 96px 258px 104px;
+}
+
+.newsletter-wrapper {
+  padding: 0 105px;
+  margin-bottom: 54px;
+}
+
+.newsletter-background {
+  background: #82b3d3 url("../images/newsletter-background.jpg") 0 0/cover no-repeat;
+  color: #fff;
+}
+
+.newsletter-title {
+  font-size: 30px;
+  line-height: 36px;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.newsletter-description {
+  margin: 0;
+}
+
+.newsletter-background .newsletter-title {
+  color: #fff;
+}
+
+/* Форма рассылки */
+.newsletter-form {
+  display: flex;
+}
+
+.newsletter-button {
+  background-color: #82b3d3;
+  font-size: 20px;
+  line-height: 36px;
+  padding: 8px 50px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+
+}
+
+.newsletter-input {
+  background-color: #f2f2f2;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 14px 20px;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  flex-grow: 1;
+}
+
+/* Страница каталога */
+/* Фильтрация гостиниц */
+.filter-wrapper {
+  color: #fff;
+  background: #82b3d3 url("../images/catalog-header-background.jpg") 0 0/cover no-repeat;
+  padding: 35px 70px 70px;
+}
+
+/* Заголовок и хлебные крошки */
+.catalog-title {
+  font-size: 60px;
+  line-height: 78px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.breadcrumbs {
+  font-size: 16px;
+  line-height: 21px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.breadcrumbs-item {
+  margin-right: 11px;
+}
+
+.breadcrumbs-item:not(:last-child):after {
+  content: "";
+  display: inline-block;
+  background-image: url('../images/right-arrow.svg');
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 11px;
+  margin-left: 9px;
+}
+
+.breadcrumbs-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Форма фильтрации */
+.filter-form {
+  display: flex;
+}
+
+.filter-infrastructure,
+.filter-housing,
+.filter-price {
+  min-width: 150px;
+  min-height: 160px;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.filter-infrastructure {
+  margin-right: 70px;
+}
+
+.filter-housing {
+  margin-right: 140px;
+}
+
+.filter-price {
+  min-width: 290px;
+  margin-right: 70px;
+}
+
+.control-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.control-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.control {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.control:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+/* Кнопки формы */
+.filter-button-wrapper {
+  min-height: 104px;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.filter-button {
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #82b3d3;
+  padding: 8px 50px;
+  border: none;
+}
+
+.reset-button {
+  background: none;
+  padding: 8px 57px;
+}
+
+.reset-button:hover {
+  opacity: 0.6;
+}
+
+.reset-button:focus-visible {
+  outline: 3px solid #82b3d3;
+}
+
+.reset-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.reset-button[disabled] {
+  opacity: 0.1;
+}
+
+/* Сортировка и способ отображения */
+.cards {
+  padding: 50px 70px 60px;
+}
+
+/* Сортировка */
+.sort-wrapper {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.cards-title {
+  font-size: 30px;
+  line-height: 36px;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
+  margin-right: 200px;
+  align-self: center;
+}
+
+.cards-sort {
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333;
+  min-width: 290px;
+  padding: 12px 15px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.cards-sort:hover,
+.cards-sort:focus {
+  border: 2px solid #68A2CA;
+}
+
+.cards-sort:active {
+  border: 2px solid #3F5E72;
+}
+
+.cards-sort[disabled] {
+  color: rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+/* Отображение карточек */
+.cards-display {
+  text-align: center;
+  min-width: 160px;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.display-button {
+  box-sizing: border-box;
+  color: #000;
+  min-width: 48px;
+  min-height: 48px;
+  border: 2px solid #e5e5e5;
+  padding: 0;
+}
+
+.display-button:hover {
+  border: 2px solid #000000;
+}
+
+.display-button:focus-visible {
+  outline: none;
+  border: 2px solid #68A2CA;
+}
+
+.display-button-current {
+  border: 2px solid #000;
+}
+
+.display-button:nth-child(1) {
+  background: url('../images/display-icons/display-many-cards.svg') no-repeat 50% 50%;
+}
+
+.display-button:nth-child(2) {
+  background: url('../images/display-icons/display-one-card.svg') no-repeat 50% 50%;
+}
+
+.display-button:nth-child(3) {
+  background: url('../images/display-icons/display-list.svg') no-repeat 50% 50%;
+}
+
+/* Карточки гостиниц */
+.cards-wrapper {
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  min-height: 438px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* Картинка и название */
+.card-link {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+.card-image {
+  margin-bottom: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.card-title {
+  color: #000;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+}
+
+/* Описание */
+.description-wrapper {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  gap: 16px 20px;
+}
+
+/* Тип, цена */
+.card-type,
+.card-price {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card-price {
+  text-align: right;
+}
+
+/* Кнопки */
+.card-button {
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #756157;
+}
+
+.favorites-button {
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #82b3d3;
+}
+
+.favorites-button-active {
+  background-color: #7db54f;
+}
+
+.favorites-button-active:hover,
+.favorites-button-active:focus {
+  background-color: #6c9e42;
+}
+
+.favorites-button-active:active {
+  background-color: #7db54f;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Рейтинг */
+.stars {
+  display: flex;
+}
+
+.star {
+  display: block;
+  padding: 10px 6px 10px 0;
+}
+
+.rating {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #f2f2f2;
+  padding: 8px 0;
+  border-radius: 4px;
+}
+
+/* Нумерация страниц */
+.pagination {
+  font-size: 20px;
+  line-height: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pagination-link {
+  min-width: 60px;
+  background-color: #82b3d3;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 4px;
+}
+
+.pagination-link:not(.pagination-link-current):hover,
+.pagination-link:focus {
+  background-color: #68A2CA;
+}
+
+.pagination-link:not(.pagination-link-current):active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.pagination-spacing {
+  min-width: 60px;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.pagination-link-current {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+/* Подвал страницы */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 45px 70px 35px;
+}
+
+/* Соц сети */
+.social {
+  display: flex;
+}
+
+.social-link {
+  min-width: 47px;
+  min-height: 40px;
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+
+.social-icon {
+  fill: #83B3D3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: #68A2CA;
+}
+
+.social-link:active .social-icon {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
+.vkontakte {
+  margin-left: -12px;
+  margin-top: -7px;
+}
+
+.telegram {
+  margin-left: -9px;
+  margin-top: -8px;
+}
+
+.youtube {
+  margin-left: -11px;
+  margin-top: -8px;
+}
+
+/* Телефон */
+.phone-link {
+  font-size: 40px;
+  line-height: 40px;
+  color: #000;
+  text-decoration: none;
+}
+
+.phone-link:hover,
+.phone-link:focus {
+  color: #756157;
+}
+
+.phone-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+/* логотип HTML Academy */
+.partner-link {
+  min-width: 115px;
+  min-height: 34px;
+}
+
+.partner-icon {
+  fill: #000;
+}
+
+.partner-link:hover .partner-icon,
+.partner-link:focus .partner-icon {
+  fill: #756157;
+}
+
+.partner-link:active .partner-icon {
+  fill: rgba(117, 97, 87, 0.3);
+}
