@@ -36,10 +36,8 @@ body {
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
+  border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -532,7 +530,7 @@ body {
 }
 
 .breadcrumbs-item {
-  margin-right: 11px;
+  margin-right: 10px;
 }
 
 .breadcrumbs-item:not(:last-child):after {
@@ -542,7 +540,7 @@ body {
   background-repeat: no-repeat;
   width: 8px;
   height: 11px;
-  margin-left: 9px;
+  margin-left: 7px;
 }
 
 .breadcrumbs-link {
@@ -550,16 +548,16 @@ body {
   display: inline-block;
 }
 
-.breadcrumbs-link:hover {
- opacity: 0.6;
+.breadcrumbs-item:not(:last-child) .breadcrumbs-link:hover {
+  opacity: 0.6;
 }
 
-.breadcrumbs-link:focus-visible {
+.breadcrumbs-item:not(:last-child) .breadcrumbs-link:focus-visible {
   outline: 2px solid #83b3d3;
   border-radius: 2px;
 }
 
-.breadcrumbs-link:active {
+.breadcrumbs-item:not(:last-child) .breadcrumbs-link:active {
   opacity: 0.3;
 }
 
@@ -591,7 +589,7 @@ body {
 }
 
 .filter-price {
-  min-width: 290px;
+  min-width: 288px;
   margin-right: 70px;
 }
 
@@ -610,10 +608,158 @@ body {
 .control {
   font-size: 18px;
   line-height: 23px;
+  padding-left: 36px;
+  position: relative;
+  cursor: pointer;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: 0.3;
 }
 
 .control:not(:last-child) {
   margin-bottom: 16px;
+}
+
+/* Чекбоксы */
+.mark-checkbox {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.control-input[type="checkbox"]:checked + .mark-checkbox {
+  background: #fff url('../images/checkbox-mark.svg') no-repeat center;
+}
+
+
+.control-input:focus-visible + .mark-checkbox {
+  outline: 3px solid #83B3D3;
+}
+
+/* Радио-кнопки */
+.mark-radio {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.control-input[type="radio"]:checked + .mark-radio::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #3F5E72;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+}
+
+.control-input:focus-visible + .mark-radio {
+  outline: 3px solid #83B3D3;
+}
+
+/* Рейнджер */
+.control-price::-webkit-inner-spin-button,
+.control-price::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+.control-price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
+
+.control-price-label {
+  position: relative;
+}
+
+.price-placeholder {
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  right: 20px;
+  top: 12px;
+}
+
+.control-price {
+  background-color: #f2f2f2;
+  font-size: 18px;
+  line-height: 24px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-weight: 700;
+  border: none;
+  padding: 12px 20px;
+  width: 143px;
+}
+
+.control-price:hover {
+  background-color: #E6E6E6;
+}
+
+.control-price:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.control-price:active {
+  outline: 2px solid #000;
+}
+
+.min-price {
+  border-radius: 4px 0 0 4px;
+}
+
+.max-price {
+  border-radius: 0 4px 4px 0;
+}
+
+/* Range */
+.range-slider {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #fff;
+  right: 60px;
+  left: 0;
+}
+
+.range-bar::before,
+.range-bar::after {
+  content: "";
+  background-color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.range-bar::after {
+  left: auto;
+  right: 0;
 }
 
 /* Кнопки формы */
@@ -676,16 +822,21 @@ body {
 }
 
 .cards-sort {
+  position: relative;
   font-family: inherit;
   box-sizing: border-box;
   font-size: 18px;
   line-height: 21px;
   color: #333;
   min-width: 290px;
-  padding: 12px 15px;
+  padding: 12px 20px;
   border: none;
   outline: 2px solid #E5E5E5;
   border-radius: 4px;
+  appearance: none;
+
+  background: url('../images/bottom-arrow.svg') no-repeat;
+  background-position: right 20px center;
 }
 
 .cards-sort:hover,
@@ -698,8 +849,9 @@ body {
 }
 
 .cards-sort[disabled] {
-  color: rgba(0, 0, 0, 0.3);
-  border: 2px solid rgba(0, 0, 0, 0.3);
+  opacity: 0.3;
+  color: #000;
+  outline: 2px solid #000;
 }
 
 .cards-divider {

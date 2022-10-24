@@ -31,7 +31,7 @@
           <!-- Обертка меню пользователя -->
           <div class="user-menu-wrapper">
             <a class="navigation-link" href="#">
-              <svg class="search-icon" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 18 18"
+              <svg class="search-icon" aria-hidden="true" focusable="false" width="18"  height="18" viewBox="0 0 18 18"
                 fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="m18.5 17-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87A8 8 0 0 0 8.5.5C4.1.5.5 4.18.5 8.56a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z">
@@ -66,7 +66,8 @@
                 <a class="breadcrumbs-link" href="index.html">
                   <svg class="breadcrumbs-icon" aria-hidden="true" focusable="false" width="13" height="13"
                     viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="m6.5.5-6 5.8v6.2h12V6.3L6.5.5Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z M4.5 10.5h1V8h2v2.5h1V7h-4v3.5Z">
+                    <path
+                      d="m6.5.5-6 5.8v6.2h12V6.3L6.5.5Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z M4.5 10.5h1V8h2v2.5h1V7h-4v3.5Z">
                   </svg>
                   <span class="visually-hidden">Главная</span>
                 </a>
@@ -87,17 +88,20 @@
                 <legend class="control-title">Инфраструктура:</legend>
                 <div class="control-wrapper">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="pool" checked>
+                    <input class="control-input visually-hidden" type="checkbox" name="pool" checked>
+                    <span class="mark-checkbox"></span>
                     Бассейн
                   </label>
 
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="parking" checked>
+                    <input class="control-input visually-hidden" type="checkbox" name="parking" checked>
+                    <span class="mark-checkbox"></span>
                     Парковка
                   </label>
 
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="wi-fi">
+                    <input class="control-input visually-hidden" type="checkbox" name="wi-fi">
+                    <span class="mark-checkbox"></span>
                     Wi-Fi
                   </label>
                 </div>
@@ -107,17 +111,20 @@
                 <legend class="control-title">Тип Жилья:</legend>
                 <div class="control-wrapper">
                   <label class="control">
-                    <input class="control-input" type="radio" name="housing" value="hotel" checked>
-                    Гостинница
+                    <input class="control-input visually-hidden" type="radio" name="housing" value="hotel" checked>
+                    <span class="mark-radio"></span>
+                    Гостиница
                   </label>
 
                   <label class="control">
-                    <input class="control-input" type="radio" name="housing" value="motel">
+                    <input class="control-input visually-hidden" type="radio" name="housing" value="motel">
+                    <span class="mark-radio"></span>
                     Мотель
                   </label>
 
                   <label class="control">
-                    <input class="control-input" type="radio" name="housing" value="apartments">
+                    <input class="control-input visually-hidden" type="radio" name="housing" value="apartments">
+                    <span class="mark-radio"></span>
                     Апартаменты
                   </label>
                 </div>
@@ -125,8 +132,23 @@
 
               <fieldset class="filter-price">
                 <legend class="control-title">Стоимость, ₽:</legend>
-                <!-- пока не стал размечать стоимость -->
+
+                <div class="control-price-wrapper">
+                  <label class="control-price-label">
+                    <span class="price-placeholder">от</span>
+                    <input class="control-price min-price" type="number" name="min-price" value="0" placeholder="от">
+                  </label>
+
+                  <label class="control-price-label">
+                    <span class="price-placeholder">до</span>
+                    <input class="control-price max-price" type="number" name="max-price" value="9000" placeholder="до">
+                  </label>
+                </div>
+                <div class="range-slider">
+                  <div class="range-bar"></div>
+                </div>
               </fieldset>
+
               <!-- Обертка кнопок -->
               <div class="filter-button-wrapper">
                 <button class="button button-blue filter-button" type="submit">Применить</button>
@@ -315,7 +337,7 @@
 
         <!-- Телефонный номер -->
         <div class="phone">
-          <a class="phone-link" href="tel:88128121212">+7 (812) 812 12 12</a>
+          <a class="phone-link" href="tel:88128121212">+7 (812) 812-12-12</a>
         </div>
 
         <!-- HTML академия -->
