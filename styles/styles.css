@@ -33,13 +33,15 @@ body {
 
 .visually-hidden {
   position: absolute;
+  white-space: nowrap;
   width: 1px;
   height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
   overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .page-wrapper {
@@ -65,6 +67,7 @@ body {
   font-weight: 700;
   font-family: inherit;
   border-radius: 4px;
+  border: none;
   padding: 8px 0;
   cursor: pointer;
 }
@@ -76,7 +79,6 @@ body {
 
 .button-dark-green:focus {
   background-color: #615048;
-  outline: none;
 }
 
 .button-dark-green:active {
@@ -91,7 +93,6 @@ body {
 
 .button-blue:focus {
   background-color: #68a2ca;
-  outline: none;
 }
 
 .button-blue:active {
@@ -102,6 +103,7 @@ body {
 .button[disabled] {
   background-color: #e5e5e5;
   color: #ffffff;
+  cursor: default;
 }
 
 /* Шапка сайта */
@@ -297,7 +299,7 @@ body {
 .accommodations-text-wrapper {
   text-align: center;
   box-sizing: border-box;
-  padding: 103px 85px 110px;
+  padding: 103px 84px 110px;
   min-height: 384px;
   position: relative;
 }
@@ -674,9 +676,15 @@ body {
 }
 
 /* Фильтр цены */
+
+/* Убирает стрелочки в <input type="number"> */
 .control-price::-webkit-inner-spin-button,
 .control-price::-webkit-outer-spin-button {
   appearance: none;
+}
+
+.control-price {
+  appearance: textfield;
 }
 
 .control-price-wrapper {
@@ -860,6 +868,7 @@ body {
   opacity: 0.3;
   color: #000000;
   outline: 2px solid #000000;
+  cursor: default;
 }
 
 /* Отображение карточек */
@@ -1163,4 +1172,261 @@ body {
 
 .partner-link:active .partner-icon {
   fill: rgba(117, 97, 87, 0.3);
+}
+
+/* Модальное окно */
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-close {
+  display: none;
+}
+
+.modal-content {
+  box-sizing: border-box;
+  color: #000000;
+  position: relative;
+  border-radius: 30px;
+  margin: auto;
+  background-color: #ffffff;
+  width: 717px;
+  padding: 64px 70px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Кнопка закрытия */
+.modal-close-button {
+  position: absolute;
+  top: 64px;
+  right: 52px;
+  min-width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #f2f2f2 url('../images/close.svg') no-repeat center;
+  border: none;
+}
+
+/* Заголовок */
+.modal-title {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0;
+  margin-bottom: 64px;
+}
+
+/* Форма */
+.modal-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Блоки полей ввода */
+.control-field {
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 48px;
+}
+
+/* Блоки полей ввода с type text */
+.control-field-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Блоки полей ввода с type number */
+.control-field-number {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.control-field-number:nth-of-type(2n-1) {
+  width: 247px;
+  margin-right: 88px;
+}
+
+.control-field-number:nth-of-type(2n) {
+  width: 242px;
+}
+
+/* Поля ввода */
+.modal-input::-webkit-inner-spin-button,
+.modal-input::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+.modal-input {
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: inherit;
+  color: #000000;
+  font-weight: 700;
+  padding: 12px 20px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 4px;
+  appearance: textfield;
+}
+
+.modal-input[type="text"] {
+  width: 440px;
+  background: #f2f2f2 url('../images/calendar.svg') no-repeat;
+  background-position: right 20px center;
+}
+
+.modal-input[type="number"] {
+  width: 110px;
+  text-align: center;
+  padding: 12px 30px;
+}
+
+.input-wrapper-number {
+  position: relative;
+}
+
+/* Прибавление или убавление числа */
+.minus-button{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 14px;
+  left: 10px;
+  opacity: 0.3;
+}
+
+.plus-button {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 14px;
+  right: 10px;
+  opacity: 0.3;
+}
+
+.minus-button::before,
+.plus-button::before,
+.plus-button::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 9px;
+  width: 14px;
+  height: 2px;
+  background-color: rgb(117, 97, 87);
+}
+
+.plus-button::after {
+  transform: rotate(90deg);
+}
+
+
+/* Текст при введенной дате */
+.modal-alert {
+  position: absolute;
+  top: 100%;
+  margin-top: 3px;
+  left: 157px;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.modal-alert.error {
+  color: #ff5757;
+}
+
+.modal-input:placeholder-shown + .modal-alert {
+  visibility: hidden;
+}
+
+/* Лэйбл полей ввода */
+.modal-control {
+  max-width: 119px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+
+/* Тултип */
+.tooltip {
+  max-width: 85px;
+  position: relative;
+}
+
+.tooltip-wrapper {
+  position: absolute;
+  top: 50%;
+  margin-top: -13px;
+  right: -36px;
+  width: 26px;
+  height: 26px;
+  background: #83b3d3 url('../images/tooltip-icon.svg') no-repeat center;
+  border-radius: 50%;
+}
+
+.tooltip-text {
+  position: absolute;
+  top: 50%;
+  right: -116px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: none;
+  text-align: left;
+  box-sizing: border-box;
+  margin-top: 28px;
+  padding: 19px 18px 18px 22px;
+  width: 256px;
+  min-height: 143px;
+  background-color: #333333;
+  color: #ffffff;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+
+  visibility: hidden;
+}
+
+.tooltip-wrapper:hover .tooltip-text {
+  visibility: visible;
+}
+
+.tooltip-text::before {
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 9px;
+  top: 0;
+  left: 50%;
+  margin-top: -9px;
+  margin-left: -10px;
+  background: url('../images/tooltip-text-decoration.svg');
+}
+
+/* Кнопка отправки */
+.modal-button {
+  width: 100%;
+  background-color: #83b3d3;
+  border: none;
+  padding: 18px 0;
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 10px;
 }
