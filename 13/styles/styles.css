@@ -1211,9 +1211,33 @@ body {
   min-width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: #f2f2f2 url('../images/close.svg') no-repeat center;
   border: none;
 }
+
+.modal-close-button svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -7px;
+  margin-top: -7px;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus-visible {
+  outline: 3px solid #83b3d3;
+}
+
+.modal-close-button:active {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:active svg {
+  opacity: 0.3;
+}
+
 
 /* Заголовок */
 .modal-title {
@@ -1282,10 +1306,33 @@ body {
   appearance: textfield;
 }
 
+.input-wrapper-text:hover .modal-input {
+  background-color: #e6e6e6;
+}
+
+.modal-input:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.modal-input:active {
+  outline: 2px solid #000000;
+}
+
+
+
 .modal-input[type="text"] {
   width: 440px;
-  background: #f2f2f2 url('../images/calendar.svg') no-repeat;
-  background-position: right 20px center;
+}
+
+.input-wrapper-text::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  top: 14px;
+  right: 20px;
+  background: url('../images/calendar.svg') no-repeat center;
 }
 
 .modal-input[type="number"] {
@@ -1299,13 +1346,12 @@ body {
 }
 
 /* Прибавление или убавление числа */
-.minus-button{
+.minus-button {
   position: absolute;
   width: 20px;
   height: 20px;
   top: 14px;
   left: 10px;
-  opacity: 0.3;
 }
 
 .plus-button {
@@ -1314,23 +1360,35 @@ body {
   height: 20px;
   top: 14px;
   right: 10px;
-  opacity: 0.3;
 }
 
-.minus-button::before,
-.plus-button::before,
-.plus-button::after {
-  content: "";
+.minus-button svg,
+.plus-button svg {
   position: absolute;
-  left: 3px;
-  top: 9px;
-  width: 14px;
-  height: 2px;
-  background-color: rgb(117, 97, 87);
+  top: 50%;
+  left: 50%;
+  margin-left: -7px;
+  margin-top: -1px;
+  fill: rgba(117, 97, 87, 0.3);
 }
 
-.plus-button::after {
-  transform: rotate(90deg);
+.plus-button svg {
+  margin-top: -7px;
+}
+
+.minus-button:hover svg,
+.plus-button:hover svg {
+  fill: #000000
+}
+
+.minus-button:focus,
+.plus-button:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.minus-button:focus svg,
+.plus-button:focus svg {
+  fill: #000000;
 }
 
 
@@ -1371,6 +1429,7 @@ body {
   position: relative;
 }
 
+/* Иконка Тултипа */
 .tooltip-wrapper {
   position: absolute;
   top: 50%;
@@ -1382,6 +1441,7 @@ body {
   border-radius: 50%;
 }
 
+/* Текст Тултипа */
 .tooltip-text {
   position: absolute;
   top: 50%;
@@ -1404,10 +1464,16 @@ body {
   visibility: hidden;
 }
 
-.tooltip-wrapper:hover .tooltip-text {
+.tooltip-wrapper:hover .tooltip-text,
+.tooltip-wrapper:focus .tooltip-text {
   visibility: visible;
 }
 
+.tooltip-wrapper:focus-visible {
+  outline: 1px solid #000000;
+}
+
+/* Декоративный треугольник */
 .tooltip-text::before {
   content: "";
   position: absolute;
