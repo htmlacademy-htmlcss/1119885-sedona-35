@@ -77,8 +77,8 @@ body {
   background-color: #615048;
 }
 
-.button-dark-green:focus {
-  outline: 3px solid #615048;
+.button-dark-green:focus-visible {
+  outline: 2px solid #000000;
   background-color: #615048;
 }
 
@@ -92,8 +92,8 @@ body {
   background-color: #68a2ca;
 }
 
-.button-blue:focus {
-  outline: 3px solid #68a2ca;
+.button-blue:focus-visible {
+  outline: 2px solid #000000;
   background-color: #68a2ca;
 }
 
@@ -112,6 +112,7 @@ body {
 .header {
   padding: 0 70px;
   display: flex;
+  min-height: 64px;
 }
 
 /* Навигация */
@@ -130,7 +131,7 @@ body {
   position: relative;
 }
 
-.navigation-logo-link:focus {
+.navigation-logo-link:focus-visible {
   outline: 2px solid #000000;
 }
 
@@ -187,7 +188,7 @@ body {
   background-color: #f5f5f5;
 }
 
-.navigation-link:not(.navigation-link-current):focus {
+.navigation-link:not(.navigation-link-current):focus-visible {
   background-color: #f5f5f5;
   outline: 2px solid #000000;
 }
@@ -268,6 +269,8 @@ body {
 
 .hero-description-wrapper {
   padding: 69px 270px 90px;
+  box-sizing: border-box;
+  min-height: 282px;
 }
 
 
@@ -308,6 +311,7 @@ body {
   padding: 103px 84px 110px;
   min-height: 384px;
   position: relative;
+  word-wrap: break-word;
 }
 
 .features-text-wrapper {
@@ -404,6 +408,8 @@ body {
 .search {
   text-align: center;
   padding: 96px 304px;
+  min-height: 406px;
+  box-sizing: border-box;
 }
 
 .search-wrapper {
@@ -437,6 +443,8 @@ body {
 .newsletter {
   text-align: center;
   padding: 96px 258px 104px;
+  box-sizing: border-box;
+  min-height: 414px;
 }
 
 .newsletter-wrapper {
@@ -611,6 +619,7 @@ body {
   line-height: 24px;
   font-weight: 700;
   margin-bottom: 32px;
+  word-wrap: break-word;
 }
 
 .control {
@@ -725,7 +734,7 @@ body {
   font-family: inherit;
   font-weight: 700;
   border: none;
-  padding: 12px 20px;
+  padding: 12px 45px 12px 19px;
   width: 143px;
 }
 
@@ -865,8 +874,8 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  min-width: 290px;
-  padding: 12px 20px;
+  width: 290px;
+  padding: 12px 40px 12px 20px;
   border: none;
   outline: 2px solid #e5e5e5;
   border-radius: 4px;
@@ -909,6 +918,8 @@ body {
   min-height: 48px;
   border: 2px solid #e5e5e5;
   padding: 0;
+  text-transform: none;
+  font-weight: 400;
 }
 
 .display-button:hover {
@@ -949,6 +960,7 @@ body {
   border-radius: 4px;
   min-height: 438px;
   padding: 20px;
+  word-wrap: break-word;
 }
 
 /* Картинка и название */
@@ -1013,7 +1025,7 @@ body {
   background-color: #6c9e42;
 }
 
-.favorites-button-active:focus {
+.favorites-button-active:focus-visible {
   background-color: #6c9e42;
   outline: 3px solid #6c9e42;
 }
@@ -1062,12 +1074,13 @@ body {
 }
 
 .pagination-link {
+  box-sizing: border-box;
   min-width: 60px;
   background-color: #82b3d3;
   color: #ffffff;
   text-decoration: none;
   text-align: center;
-  padding: 12px 0;
+  padding: 12px 12px;
   border-radius: 4px;
 }
 
@@ -1075,7 +1088,7 @@ body {
   background-color: #68a2ca;
 }
 
-.pagination-link:focus {
+.pagination-link:focus-visible {
   background-color: #68a2ca;
   outline: 3px solid #68a2ca;
 }
@@ -1101,6 +1114,8 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 45px 70px 35px;
+  box-sizing: border-box;
+  min-height: 120px;
 }
 
 /* Соц сети */
@@ -1176,6 +1191,7 @@ body {
 .partner-link {
   min-width: 115px;
   min-height: 34px;
+  display: block;
 }
 
 .partner-icon {
@@ -1351,7 +1367,8 @@ body {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  top: 14px;
+  top: 50%;
+  margin-top: -8px;
   right: 20px;
   background: url('../images/calendar.svg') no-repeat center;
 }
@@ -1373,6 +1390,7 @@ body {
   height: 20px;
   top: 14px;
   left: 10px;
+  background-color: inherit;
 }
 
 .plus-button {
@@ -1381,6 +1399,7 @@ body {
   height: 20px;
   top: 14px;
   right: 10px;
+  background-color: inherit;
 }
 
 .minus-button svg,
@@ -1407,9 +1426,14 @@ body {
   outline: 3px solid #83b3d3;
 }
 
-.minus-button:focus svg,
-.plus-button:focus svg {
+.minus-button:focus-visible svg,
+.plus-button:focus-visible svg {
   fill: #000000;
+}
+
+.minus-button:active svg,
+.plus-button:active svg {
+  opacity: 0.2;
 }
 
 
@@ -1516,4 +1540,9 @@ body {
   font-size: 20px;
   line-height: 24px;
   border-radius: 10px;
+  word-wrap: break-word;
+}
+
+.modal-button:focus {
+  outline: 3px solid #68a2ca;
 }
