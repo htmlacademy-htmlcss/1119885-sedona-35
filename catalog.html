@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <title>Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
 
   <body>
@@ -12,10 +14,10 @@
     <div class="page-wrapper">
       <!-- Шапка страницы -->
       <header class="header">
-        <a class="navigation-logo-link" href="index.html">
-          <img class="navigation-logo" src="images/logo.svg" alt="Логотип сайта Седона" width="140" height="70">
-        </a>
         <nav class="navigation">
+          <a class="navigation-logo-link" href="index.html">
+            <img class="navigation-logo" src="images/logo.svg" alt="Логотип сайта Седона." width="140" height="70">
+          </a>
           <!-- Обертка меню -->
           <div class="menu-wrapper">
             <a class="navigation-link" href="index.html">
@@ -87,13 +89,13 @@
               <fieldset class="filter-infrastructure">
                 <legend class="control-title">Инфраструктура:</legend>
                 <div class="control-wrapper">
-                  <input class="control-input visually-hidden" id="pool" type="checkbox" name="pool" checked>
+                  <input class="control-input visually-hidden" type="checkbox" id="pool" name="pool" checked>
                   <label class="control" for="pool">Бассейн</label>
 
-                  <input class="control-input visually-hidden" id="parking" type="checkbox" name="parking" checked>
+                  <input class="control-input visually-hidden" type="checkbox" id="parking" name="parking" checked>
                   <label class="control" for="parking">Парковка</label>
 
-                  <input class="control-input visually-hidden" id="wi-fi" type="checkbox" name="wi-fi">
+                  <input class="control-input visually-hidden" type="checkbox" id="wi-fi" name="wi-fi">
                   <label class="control" for="wi-fi">Wi-Fi</label>
                 </div>
               </fieldset>
@@ -101,14 +103,14 @@
               <fieldset class="filter-housing">
                 <legend class="control-title">Тип Жилья:</legend>
                 <div class="control-wrapper">
-                  <input class="control-input visually-hidden" id="hotel" type="radio" name="housing" value="hotel"
+                  <input class="control-input visually-hidden" type="radio" id="hotel" name="housing" value="hotel"
                     checked>
                   <label class="control" for="hotel">Гостиница</label>
 
-                  <input class="control-input visually-hidden" id="motel" type="radio" name="housing" value="motel">
+                  <input class="control-input visually-hidden" type="radio" id="motel" name="housing" value="motel">
                   <label class="control" for="motel">Мотель</label>
 
-                  <input class="control-input visually-hidden" id="apartments" type="radio" name="housing"
+                  <input class="control-input visually-hidden" type="radio" id="apartments" name="housing"
                     value="apartments">
                   <label class="control" for="apartments">Апартаменты</label>
                 </div>
@@ -151,7 +153,7 @@
             <h2 class="cards-title">Найдено гостиниц: <span class="result-count">38</span></h2>
 
             <!-- Сортировка -->
-            <select class="cards-sort" aria-label="Сортировка">
+            <select class="cards-sort" aria-label="Сортировка.">
               <option value="cheap">Сначала дешёвые</option>
               <option value="popular">Сначала популярные</option>
               <option value="expensive">Сначала дорогие</option>
@@ -178,83 +180,105 @@
             <!-- Карточки товаров -->
             <article class="card">
               <a class="card-link" href="#" tabindex="-1">
-                <img class="card-image" src="images/catalog-cards/hotel-1.jpg" alt="Горное ущелье" width="300"
+                <img class="card-image" src="images/catalog-cards/amara-hotel.jpg" alt="Горное ущелье." width="300"
                   height="212">
+              </a>
+
+              <a class="card-link" href="#" tabindex="-1">
                 <h3 class="card-title">Amara Resort & Spa</h3>
               </a>
-              <div class="description-wrapper">
-                <span class="card-type">Гостиница</span>
-                <span class="card-price">От 4000 ₽</span>
-                <a class="button button-dark-green card-button" href="#">Подробнее</a>
-                <a class="button button-blue favorites-button" href="#">В избранное</a>
-                <span class="stars">
-                  <img class="star" src="images/rating-star.svg" alt="">
-                  <img class="star" src="images/rating-star.svg" alt="">
-                  <img class="star" src="images/rating-star.svg" alt="">
-                  <img class="star" src="images/rating-star.svg" alt="">
-                </span>
-                <span class="rating">Рейтинг: 8,5</span>
-              </div>
+
+              <span class="card-type">Гостиница</span>
+              <span class="card-price">От 4000 ₽</span>
+
+              <a class="button button-dark-green card-button" href="#">Подробнее</a>
+              <a class="button button-blue favorites-button" href="#">В избранное</a>
+
+              <span class="stars">
+                <img class="star" src="images/rating-star.svg" alt="" width="18" height="17">
+                <img class="star" src="images/rating-star.svg" alt="" width="18" height="17">
+                <img class="star" src="images/rating-star.svg" alt="" width="18" height="17">
+                <img class="star" src="images/rating-star.svg" alt="" width="18" height="17">
+                <span class="visually-hidden">4 звезды</span>
+              </span>
+              <span class="rating">Рейтинг: 8,5</span>
             </article>
 
             <article class="card">
               <a class="card-link" href="#" tabindex="-1">
-                <img class="card-image" src="images/catalog-cards/hotel-2.jpg" alt="Дальние горы и радуга на небе"
+                <img class="card-image" src="images/catalog-cards/villas-hotel.jpg" alt="Дальние горы и радуга на небе."
                   width="300" height="212">
+              </a>
+              <a class="card-link" href="#" tabindex="-1">
                 <h3 class="card-title">Villas at Poco Diablo</h3>
               </a>
-              <div class="description-wrapper">
-                <span class="card-type">Гостиница</span>
-                <span class="card-price">От 5000 ₽</span>
-                <a class="button button-dark-green card-button" href="#">Подробнее</a>
-                <a class="button favorites-button favorites-button-active" href="#">В избранном</a>
-                <span class="stars">
-                  <img src="images/rating-star.svg" alt="" class="star">
-                  <img src="images/rating-star.svg" alt="" class="star">
-                  <img src="images/rating-star.svg" alt="" class="star">
-                  <img src="images/rating-star.svg" alt="" class="star">
-                </span>
-                <span class="rating">Рейтинг: 9,2</span>
-              </div>
+
+              <span class="card-type">Гостиница</span>
+              <span class="card-price">От 5000 ₽</span>
+
+              <a class="button button-dark-green card-button" href="#">Подробнее</a>
+              <a class="button favorites-button favorites-button-active" href="#">В избранном</a>
+
+              <span class="stars">
+                <img class="star" src="images/rating-star.svg" alt="" width="18" height="17">
+                <img class="star" src="images/rating-star.svg" alt="" width="18" height="17">
+                <img class="star" src="images/rating-star.svg" alt="" width="18" height="17">
+                <img class="star" src="images/rating-star.svg" alt="" width="18" height="17">
+                <span class="visually-hidden">4 звезды</span>
+              </span>
+              <span class="rating">Рейтинг: 9,2</span>
+
             </article>
 
             <article class="card">
               <a class="card-link" href="#" tabindex="-1">
-                <img class="card-image" src="images/catalog-cards/hotel-3.jpg" alt="Высокие горы" width="300"
+                <img class="card-image" src="images/catalog-cards/desert-hotel.jpg" alt="Высокие горы." width="300"
                   height="212">
+              </a>
+
+              <a class="card-link" href="#" tabindex="-1">
                 <h3 class="card-title">Desert Quail Inn</h3>
               </a>
-              <div class="description-wrapper">
-                <span class="card-type">Гостиница</span>
-                <span class="card-price">От 2500 ₽</span>
-                <a class="button button-dark-green card-button" href="#">Подробнее</a>
-                <a class="button button-blue favorites-button" href="#">В избранное</a>
-                <span class="stars">
-                  <img src="images/rating-star.svg" alt="" class="star">
-                  <img src="images/rating-star.svg" alt="" class="star">
-                  <img src="images/rating-star.svg" alt="" class="star">
-                </span>
-                <span class="rating">Рейтинг: 6,9</span>
-              </div>
+
+              <span class="card-type">Гостиница</span>
+              <span class="card-price">От 2500 ₽</span>
+
+              <a class="button button-dark-green card-button" href="#">Подробнее</a>
+              <a class="button button-blue favorites-button" href="#">В избранное</a>
+
+              <span class="stars">
+                <img class="star" src="images/rating-star.svg" alt="" width="18" height="17">
+                <img class="star" src="images/rating-star.svg" alt="" width="18" height="17">
+                <img class="star" src="images/rating-star.svg" alt="" width="18" height="17">
+                <span class="visually-hidden">3 звезды</span>
+              </span>
+              <span class="rating">Рейтинг: 6,9</span>
+
             </article>
 
             <article class="card">
               <a class="card-link" href="#" tabindex="-1">
-                <img class="card-image" src="images/catalog-cards/hotel-4.jpg" alt="Горы на фоне ночного неба"
+                <img class="card-image" src="images/catalog-cards/greentree-hotel.jpg" alt="Горы на фоне ночного неба"
                   width="300" height="212">
+              </a>
+
+              <a class="card-link" href="#" tabindex="-1">
                 <h3 class="card-title">GreenTree Inn</h3>
               </a>
-              <div class="description-wrapper">
-                <span class="card-type">Гостиница</span>
-                <span class="card-price">От 1500 ₽</span>
-                <a class="button button-dark-green card-button" href="#">Подробнее</a>
-                <a class="button button-blue favorites-button" href="#">В избранное</a>
-                <span class="stars">
-                  <img src="images/rating-star.svg" alt="" class="star">
-                  <img src="images/rating-star.svg" alt="" class="star">
-                </span>
-                <span class="rating">Рейтинг: 5,0</span>
-              </div>
+
+              <span class="card-type">Гостиница</span>
+              <span class="card-price">От 1500 ₽</span>
+
+              <a class="button button-dark-green card-button" href="#">Подробнее</a>
+              <a class="button button-blue favorites-button" href="#">В избранное</a>
+
+              <span class="stars">
+                <img class="star" src="images/rating-star.svg" alt="" width="18" height="17">
+                <img class="star" src="images/rating-star.svg" alt="" width="18" height="17">
+                <span class="visually-hidden">2 звезды</span>
+              </span>
+              <span class="rating">Рейтинг: 5,0</span>
+
             </article>
           </div>
 
