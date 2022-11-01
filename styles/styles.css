@@ -150,8 +150,8 @@ body {
 
 /* Меню навигации */
 .menu-wrapper {
-  width: 500px;
   flex-grow: 1;
+  width: 500px;
 }
 
 .menu-wrapper,
@@ -159,6 +159,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+.user-menu-wrapper {
+  margin-left: 20px;
 }
 
 /* Ссылки меню */
@@ -175,9 +179,9 @@ body {
 
 .user-menu-wrapper .navigation-link {
   box-sizing: border-box;
-  padding: 0 12px;
   min-width: 44px;
   min-height: 64px;
+  padding: 0 12px;
 }
 
 /* Текущая страница */
@@ -188,8 +192,8 @@ body {
   right: 16px;
   bottom: 0;
 
-  margin-bottom: -1px;
   min-height: 2px;
+  margin-bottom: -1px;
 
   background-color: #756157;
 }
@@ -229,7 +233,7 @@ body {
 .favorites-count {
   position: absolute;
   top: 11px;
-  left: 21px;
+  left: 23px;
 
   box-sizing: border-box;
   width: 20px;
@@ -263,6 +267,8 @@ body {
 }
 
 .hero-logo-wrapper {
+  box-sizing: border-box;
+  min-height: 485px;
   padding-top: 52px;
   padding-bottom: 75px;
 
@@ -296,25 +302,19 @@ body {
 }
 
 /* Особенности */
-/* Обнуление параметров про умолчанию */
 .features-list,
 .accommodations-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   padding: 0;
   margin: 0;
 
   list-style-type: none;
 }
 
-/* Грид сетка */
-.features-list,
-.accommodations-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
 /* Иконки */
 .accommodations-item:nth-child(1) {
-  background: rgba(131, 179, 211, 0.12) url('../images/accomodation-icons/house-icon.svg') 50% 80px no-repeat;
+  background: rgba(131, 179, 211, 0.12) url("../images/accomodation-icons/house-icon.svg") 50% 80px no-repeat;
 }
 
 .accommodations-item:nth-child(2) {
@@ -362,6 +362,7 @@ body {
 }
 
 .blue-flex .features-text-wrapper {
+  flex-grow: 1;
   padding-top: 92px;
 }
 
@@ -558,6 +559,8 @@ body {
 /* Страница каталога */
 /* Фильтрация гостиниц */
 .filter-wrapper {
+  box-sizing: border-box;
+  min-height: 412px;
   padding: 35px 70px 70px;
 
   color: #ffffff;
@@ -576,6 +579,7 @@ body {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
@@ -589,7 +593,7 @@ body {
   margin-right: 10px;
 }
 
-.breadcrumbs-item:not(:last-child):after {
+.breadcrumbs-item:not(:last-child)::after {
   content: "";
   display: inline-block;
   width: 8px;
@@ -625,6 +629,8 @@ body {
 /* Форма фильтрации */
 .filter-form {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
 }
 
 .filter-infrastructure,
@@ -707,10 +713,6 @@ body {
   background: #ffffff url("../images/checkbox-mark.svg") no-repeat center;
 }
 
-.control-input:focus-visible + .control::before {
-  outline: 3px solid #83b3d3;
-}
-
 /* Радио-кнопки */
 .filter-housing .control::before {
   content: "";
@@ -743,14 +745,9 @@ body {
 }
 
 /* Фильтр цены */
-/* Убирает стрелочки в <input type="number"> */
 .control-price::-webkit-inner-spin-button,
 .control-price::-webkit-outer-spin-button {
   appearance: none;
-}
-
-.control-price {
-  appearance: textfield;
 }
 
 .control-price-wrapper {
@@ -763,8 +760,7 @@ body {
   position: relative;
 }
 
-.control-price-label:nth-child(1)::before,
-.control-price-label:nth-child(2)::before {
+.control-price-label::before {
   content: "от";
   position: absolute;
   right: 20px;
@@ -791,6 +787,8 @@ body {
 
   background-color: #f2f2f2;
   border: none;
+
+  appearance: textfield;
 }
 
 .control-price:hover {
@@ -916,6 +914,7 @@ body {
 /* Сортировка */
 .sort-wrapper {
   display: flex;
+  align-items: center;
   margin-bottom: 40px;
 }
 
@@ -936,6 +935,7 @@ body {
 
   box-sizing: border-box;
   width: 290px;
+  margin-right: 70px;
   padding: 12px 40px 12px 20px;
 
   font-family: inherit;
@@ -972,8 +972,9 @@ body {
 .cards-display {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 8px;
-  min-width: 160px;
+  width: 160px;
   margin-left: auto;
 
   text-align: center;
@@ -1201,7 +1202,7 @@ body {
 .social {
   display: flex;
   flex-wrap: wrap;
-  width: 200px;
+  width: 141px;
 }
 
 .social-link {
@@ -1251,6 +1252,10 @@ body {
 }
 
 /* Телефон */
+.phone {
+  max-width: 350px;
+}
+
 .phone-link {
   font-size: 40px;
   line-height: 40px;
@@ -1274,6 +1279,10 @@ body {
 }
 
 /* логотип HTML Academy */
+.partner {
+  align-self: center;
+}
+
 .partner-link {
   display: block;
   min-width: 115px;
@@ -1547,9 +1556,9 @@ body {
 /* Текст при введенной дате */
 .modal-alert {
   position: absolute;
-  top: 100%;
   left: 157px;
 
+  display: block;
   margin-top: 3px;
 
   font-size: 16px;
@@ -1562,7 +1571,7 @@ body {
 }
 
 .modal-input:placeholder-shown + .modal-alert {
-  visibility: hidden;
+  display: none;
 }
 
 /* Лэйбл полей ввода */
@@ -1608,7 +1617,6 @@ body {
 
   box-sizing: border-box;
   width: 256px;
-  min-height: 143px;
   margin-top: 28px;
   padding: 19px 18px 18px 22px;
 
