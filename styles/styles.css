@@ -81,7 +81,7 @@ body {
 }
 
 .button-dark-green:focus-visible {
-  outline: 2px solid #000000;
+  outline: 3px solid #756157;
   background-color: #615048;
 }
 
@@ -97,7 +97,7 @@ body {
 }
 
 .button-blue:focus-visible {
-  outline: 2px solid #000000;
+  outline: 3px solid #82b3d3;
   background-color: #68a2ca;
 }
 
@@ -1043,7 +1043,7 @@ body {
 /* Картинка и название */
 .card-link {
   display: block;
-  grid-column: 1/ -1;
+  grid-column: 1 / -1;
 
   text-decoration: none;
 }
@@ -1096,7 +1096,7 @@ body {
 }
 
 .favorites-button-active:focus-visible {
-  outline: 2px solid #000000;
+  outline: 3px solid #7db54f;
   background-color: #6c9e42;
 }
 
@@ -1166,7 +1166,7 @@ body {
 }
 
 .pagination-link:focus-visible {
-  outline: 2px solid #000000;
+  outline: 3px solid #82b3d3;
 
   background-color: #68a2ca;
 }
@@ -1639,7 +1639,7 @@ body {
 }
 
 .tooltip-wrapper:focus-visible {
-  outline: 1px solid #000000;
+  outline: 3px solid #68a2ca;
 }
 
 /* Декоративный треугольник */
@@ -1673,5 +1673,5 @@ body {
 }
 
 .modal-button:focus {
-  outline: 2px solid #000000;
+  outline: 3px solid #83b3d3;
 }
