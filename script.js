@@ -7,7 +7,7 @@ var plus1 = document.querySelector(".plus-button-first");
 var minus2 = document.querySelector(".minus-button-second");
 var plus2 = document.querySelector(".plus-button-second");
 var adult = document.querySelector("#adult");
-var adult = document.querySelector("#child");
+var child = document.querySelector("#child");
 
 search.removeAttribute("href");
 
@@ -30,9 +30,9 @@ plus1.onclick = function() {
 }
 
 minus2.onclick = function() {
-  adult.value -= 1;
+  child.value -= 1;
 }
 
 plus2.onclick = function() {
-  adult.value -= -1;
+  child.value -= -1;
 }
